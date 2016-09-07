@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907134302) do
+ActiveRecord::Schema.define(version: 20160907163725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,9 +26,12 @@ ActiveRecord::Schema.define(version: 20160907134302) do
 
   create_table "films", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "cinefile_id"
   end
+
+  add_index "films", ["cinefile_id"], name: "index_films_on_cinefile_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -51,4 +54,5 @@ ActiveRecord::Schema.define(version: 20160907134302) do
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   add_foreign_key "cinefiles", "users"
+  add_foreign_key "films", "cinefiles"
 end
