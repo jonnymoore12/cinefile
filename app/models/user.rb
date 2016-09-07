@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:login]
 
-  has_many :cinefiles
+  has_one :cinefile
 
   validates :username, :presence => true, :uniqueness => { :case_sensitive => false}
 
