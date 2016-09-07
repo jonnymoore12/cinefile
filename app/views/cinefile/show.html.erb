@@ -2,6 +2,7 @@
 
 <%= button_to "Add a film", new_user_cinefile_film_path(@user.id, @user.cinefile.id), method: :get %>
 
-<%= @user.cinefile.films.each do |film| %>
+<% @user.cinefile.films.each do |film| %>
   <%= film.title %>
+  <%= button_to "Delete #{film.title}", user_cinefile_film_path(@user.id, @user.cinefile.id, film.id), method: :delete %>
 <% end %>
