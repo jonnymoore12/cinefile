@@ -1,0 +1,2 @@
+module CinefilesHelper
+end

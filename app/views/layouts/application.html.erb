@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cinefile</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Title of app with home link here -->
+      <nav>
+        <ul class='nav navbar-nav navbar-right'>
+          <% if user_signed_in? %>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to "Dashboard", user_path(current_user) %></li>
+            <% else %>
+            <li><%= link_to "Log in", new_user_session_path %></li>
+            <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+<%= yield %>
+
+</body>
+</html>
