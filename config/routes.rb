@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :cinefiles
   end
 
-  root to: "cinefiles#index"
+  root to: "static_pages#home"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
