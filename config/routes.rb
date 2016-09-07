@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   resources :users do
-    resources :cinefile
-  end
+    resources :cinefile do
+      resources :films
+    end
+  end  
 
   root to: "static_pages#home"
 
