@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  resources :users
-  resources :cinefiles
+  resources :users do
+    resources :cinefiles
+  end
 
   root to: "cinefiles#index"
 
