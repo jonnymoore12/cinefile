@@ -1,7 +1,1 @@
-Welcome to <%= @user.email %>'s dashboard!
-<%= button_to "Create Cinefile", new_user_cinefile_path(@user), method: :get %>
-<% if @user.cinefiles.any? %>
-  <%= "#{@user.email}'s Cinefiles:" %>
-<% else %>
-  <%= "You don't have a Cinefile!" %>
-<% end %>
+Welcome to <%= @user.name %>'s dashboard!

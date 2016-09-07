@@ -4,13 +4,8 @@ class CinefilesController < ApplicationController
   end
 
   def new
-    @user = current_user
+    redirect_to 'cinefiles_path', method: :post
   end
 
-  def create
-    @user = current_user
-    @user.cinefiles.create
-    redirect_to "/users/#{@user.id}"
-  end
 
 end
