@@ -1,5 +1,5 @@
 class Film < ActiveRecord::Base
 
-  belongs_to :cinefile, through: :film_list 
-
+  has_many :cinefiles, through: :list_film
+  has_many :list_films
 end

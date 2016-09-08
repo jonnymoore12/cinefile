@@ -9,16 +9,14 @@ class CinefileController < ApplicationController
    if @user.cinefile.nil?
      @cinefile = Cinefile.create
      @user.cinefile = @cinefile
-     @film_list = FilmList.create
-     @user.cinefile.film_list = @film_list
    end
-    redirect_to user_cinefile_path(@user.id, @user.cinefile.id)
+     redirect_to user_cinefile_path(@user.id, @user.cinefile.id)
   end
 
   def show
     @user = current_user
     @cinefile = @user.cinefile
-    @film_list = @cinefile.film_list
+    @list_film = ListFilm.new
   end
 
 end
