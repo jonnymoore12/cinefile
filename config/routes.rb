@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   resources :users do
     resources :cinefile do
-      resources :list_film
+      resources :list_films
     end
   end
 

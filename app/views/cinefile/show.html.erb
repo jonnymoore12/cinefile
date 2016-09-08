@@ -1,7 +1,5 @@
 <%= "Welcome to #{@user.username}'s Cinefile" %>
-<%#= button_to "Add Film", edit_user_cinefile_list_film_path(@user.id, @cinefile.id, @list_film.id), method: :get %>
-
-<%= form_for @list_film do |f|%>
-  <%= f.select(:film_id, [['Jaws', 1]) %>
-  <%= f.submit %>
+<%= button_to "Add Film", new_user_cinefile_list_film_path(@user, @cinefile, @list_film), method: :get %>
+<% @titles.each do |title| %>
+  <%= title %>
 <% end %>

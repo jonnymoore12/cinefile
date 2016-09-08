@@ -14,8 +14,18 @@ class CinefileController < ApplicationController
   end
 
   def show
+    @films = Film.all
     @user = current_user
     @cinefile = @user.cinefile
+    @list_films = @cinefile.list_films.all
+    @titles = []
+    @list_films.each do |list_film|
+      @films.each do |film|
+        if film.id == list_film.film_id
+          @titles << film.title
+        end
+      end
+    end
     @list_film = ListFilm.new
   end
 

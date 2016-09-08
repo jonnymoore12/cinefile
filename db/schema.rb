@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160908155226) do
+ActiveRecord::Schema.define(version: 20160908172754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,15 +30,16 @@ ActiveRecord::Schema.define(version: 20160908155226) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "list_film", force: :cascade do |t|
+  create_table "list_films", force: :cascade do |t|
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "cinefile_id"
     t.integer  "film_id"
+    t.string   "title"
   end
 
-  add_index "list_film", ["cinefile_id"], name: "index_list_film_on_cinefile_id", using: :btree
-  add_index "list_film", ["film_id"], name: "index_list_film_on_film_id", using: :btree
+  add_index "list_films", ["cinefile_id"], name: "index_list_film_on_cinefile_id", using: :btree
+  add_index "list_films", ["film_id"], name: "index_list_film_on_film_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -61,6 +62,6 @@ ActiveRecord::Schema.define(version: 20160908155226) do
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   add_foreign_key "cinefiles", "users"
-  add_foreign_key "list_film", "cinefiles"
-  add_foreign_key "list_film", "films"
+  add_foreign_key "list_films", "cinefiles"
+  add_foreign_key "list_films", "films"
 end
