@@ -14,6 +14,7 @@ class CinefileController < ApplicationController
 
   def show
     @user = current_user
+    console
   end
 
 end

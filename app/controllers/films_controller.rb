@@ -4,6 +4,7 @@ class FilmsController < ApplicationController
     @user = current_user
     @cinefile = Cinefile.find(params[:cinefile_id])
     @film = Film.new
+    console
   end
 
   def create
