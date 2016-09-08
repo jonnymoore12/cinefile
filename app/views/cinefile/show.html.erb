@@ -1,1 +1,2 @@
 <%= "Welcome to #{@user.username}'s Cinefile" %>
+<%= button_to "Add Film", edit_user_cinefile_film_list_path(@user.id, @cinefile.id, @film_list.id), method: :get %>
