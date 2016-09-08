@@ -12,24 +12,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <!-- Title of app with home link here -->
-      <nav>
-        <ul class='nav navbar-nav navbar-right'>
-          <% if user_signed_in? %>
-            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-            <li><%= link_to "Cinefile", user_cinefile_index_path(current_user), method: :post %></li>
-            <% else %>
-            <li><%= link_to "Log in", new_user_session_path %></li>
-            <li><%= link_to "Sign up", new_user_registration_path %></li>
-          <% end %>
-        </ul>
-      </nav>
-    </div>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+
+  <%= render "layouts/header" %>
+  
 <%= yield %>
 
 </body>
