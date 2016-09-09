@@ -1,5 +1,18 @@
 <%= "Welcome to #{@user.username}'s Cinefile" %>
+
 <%= button_to "Add Film", new_user_cinefile_list_film_path(@user, @cinefile, @list_film), method: :get %>
 <% @titles.each do |title| %>
   <%= title %>
+
+
+<% @user.cinefile.films.each do |film| %>
+  <%= film.title %>
+  <%= button_to "Delete #{film.title}", user_cinefile_film_path(@user.id, @user.cinefile.id, film.id), method: :delete %>
+<% end %>
+
+<%= form_tag new_user_cinefile_film_path(@user.id, @user.cinefile.id), :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search for film", :name => nil %>
+  </p>
 <% end %>

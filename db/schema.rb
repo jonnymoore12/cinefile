@@ -26,9 +26,12 @@ ActiveRecord::Schema.define(version: 20160908172754) do
 
   create_table "films", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "cinefile_id"
   end
+
+  add_index "films", ["cinefile_id"], name: "index_films_on_cinefile_id", using: :btree
 
   create_table "list_films", force: :cascade do |t|
     t.datetime "created_at",  null: false
@@ -62,6 +65,7 @@ ActiveRecord::Schema.define(version: 20160908172754) do
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
   add_foreign_key "cinefiles", "users"
+  add_foreign_key "films", "cinefiles"
   add_foreign_key "list_films", "cinefiles"
   add_foreign_key "list_films", "films"
 end
