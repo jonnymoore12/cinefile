@@ -9,7 +9,7 @@ feature 'films' do
 end
 
 context 'deleting films' do
-  scenario 'allows you to remove a film from your cinefile' do
+  xscenario 'allows you to remove a film from your cinefile' do
     sign_up
     add_film
     click_button 'Delete Indiana Jones'

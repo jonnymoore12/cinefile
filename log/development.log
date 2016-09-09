@@ -20165,3 +20165,1687 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+
+
+Started GET "/" for ::1 at 2016-09-09 10:05:38 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9925ms (Views: 9910.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-09 10:05:48 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 80ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cinefile.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-09 10:05:48 +0100
+
+
+Started GET "/assets/dashboards.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-09 10:05:48 +0100
+
+
+Started GET "/assets/list_film.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-09 10:05:48 +0100
+
+
+Started GET "/css/bootstrap.min.css" for ::1 at 2016-09-09 10:05:48 +0100
+
+ActionController::RoutingError (No route matches [GET] "/css/bootstrap.min.css"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (94.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (141.3ms)
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/films.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/application.self-68281d67540a4fbacf9e6d12edaea784e75e258dfd1b61070b3a458db89c00e6.css?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/cinefile.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/dashboards.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/films.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/list_film.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-09 10:05:49 +0100
+
+
+Started GET "/users/sign_up" for ::1 at 2016-09-09 10:05:51 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 109ms (Views: 89.2ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/users" for ::1 at 2016-09-09 10:06:02 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Sy1bxLFOJS9OWnepyAGLIF/Wpjxy+fwzYUurJtaVEVbmlwqOOw/CFeJVRT+17DZWk4tS5iJDcqR5pZJC8gRBQ==", "user"=>{"username"=>"adamjbrowner", "email"=>"adamjbrowner@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (2.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'adamjbrowner@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('adamjbrowner') LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("encrypted_password", "username", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["encrypted_password", "$2a$11$kZsJiUyEHqua/IyWRHzAjuLSBhXIVRk8Hg6oeqT4vf0VVHWlMH7lS"], ["username", "adamjbrowner"], ["email", "adamjbrowner@gmail.com"], ["created_at", "2016-09-09 09:06:02.795881"], ["updated_at", "2016-09-09 09:06:02.795881"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7  [["last_sign_in_at", "2016-09-09 09:06:02.802530"], ["current_sign_in_at", "2016-09-09 09:06:02.802530"], ["last_sign_in_ip", "::1/128"], ["current_sign_in_ip", "::1/128"], ["sign_in_count", 1], ["updated_at", "2016-09-09 09:06:02.804168"], ["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 189ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-09 10:06:02 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 77ms (Views: 74.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/css/bootstrap.min.css" for ::1 at 2016-09-09 10:06:03 +0100
+
+ActionController::RoutingError (No route matches [GET] "/css/bootstrap.min.css"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (102.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (121.8ms)
+
+
+Started POST "/users/1/cinefile" for ::1 at 2016-09-09 10:06:06 +0100
+Processing by CinefileController#create as HTML
+  Parameters: {"authenticity_token"=>"OVtSfEMBXfY5+d2WCxarGqMgIqCncv/JlEkLJwU4BPyP7bs5aShaatNJ4VxS4R3veBFVc84wFfPIKrPClapBvA==", "user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.3ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cinefiles" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-09-09 09:06:06.942944"], ["updated_at", "2016-09-09 09:06:06.942944"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "cinefiles" SET "user_id" = $1, "updated_at" = $2 WHERE "cinefiles"."id" = $3[0m  [["user_id", 1], ["updated_at", "2016-09-09 09:06:06.948935"], ["id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1/cinefile/1
+Completed 302 Found in 36ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/users/1/cinefile/1" for ::1 at 2016-09-09 10:06:06 +0100
+Processing by CinefileController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.3ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mListFilm Load (0.4ms)[0m  [1mSELECT "list_films".* FROM "list_films" WHERE "list_films"."cinefile_id" = $1[0m  [["cinefile_id", 1]]
+  Rendered cinefile/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 97ms (Views: 73.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/1/cinefile/css/bootstrap.min.css" for ::1 at 2016-09-09 10:06:07 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/cinefile/css/bootstrap.min.css"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (59.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (132.4ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:06:18 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.3ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 71ms (Views: 67.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/css/bootstrap.min.css" for ::1 at 2016-09-09 10:06:19 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/cinefile/1/list_films/css/bootstrap.min.css"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (95.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (110.3ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:07:22 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.2ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 74ms (Views: 71.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/css/bootstrap.min.css" for ::1 at 2016-09-09 10:07:22 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/cinefile/1/list_films/css/bootstrap.min.css"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (95.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (52.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (125.5ms)
+
+
+Started GET "/assets/cinefile.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-09 10:07:22 +0100
+
+
+Started GET "/assets/list_film.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-09 10:07:22 +0100
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-09 10:07:22 +0100
+
+
+Started GET "/assets/films.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-09 10:07:22 +0100
+
+
+Started GET "/assets/dashboards.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/application.self-68281d67540a4fbacf9e6d12edaea784e75e258dfd1b61070b3a458db89c00e6.css?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/cinefile.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/dashboards.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/films.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/list_film.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-09-09 10:07:23 +0100
+
+
+Started POST "/users/1/cinefile/1/list_films" for ::1 at 2016-09-09 10:07:26 +0100
+Processing by ListFilmsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f0whjlpCCt9QBg1m2F1RSfDwCIXT5fGLzUwwtrQ7VlPJ+sjLcGsNQ7q2MayBque8K8F/VrqnG7GRL4hTJKkTEw==", "list_film"=>{"title"=>"asdfa"}, "commit"=>"Submit", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mFilm Load (0.6ms)[0m  SELECT "films".* FROM "films"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.3ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "list_films" ("cinefile_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["cinefile_id", 1], ["created_at", "2016-09-09 09:07:26.148405"], ["updated_at", "2016-09-09 09:07:26.148405"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/cinefile/1
+Completed 302 Found in 15ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/1/cinefile/1" for ::1 at 2016-09-09 10:07:26 +0100
+Processing by CinefileController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.4ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mListFilm Load (0.2ms)[0m  SELECT "list_films".* FROM "list_films" WHERE "list_films"."cinefile_id" = $1  [["cinefile_id", 1]]
+  [1m[36mFilm Load (0.3ms)[0m  [1mSELECT "films".* FROM "films"[0m
+  Rendered cinefile/show.html.erb within layouts/application (47.1ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined method `new_user_cinefile_film_path' for #<#<Class:0x007fb6399d1150>:0x007fb633e45520>
+Did you mean?  new_user_cinefile_path
+               new_user_cinefile_list_film_path):
+    1: <%= "Welcome to #{@user.username}'s Cinefile" %>
+    2: 
+    3: <%= form_tag new_user_cinefile_film_path(@user.id, @user.cinefile.id), :method => 'get' do %>
+    4:   <p>
+    5:     <%= text_field_tag :search, params[:search] %>
+    6:     <%= submit_tag "Search for film", :name => nil %>
+  app/views/cinefile/show.html.erb:3:in `_app_views_cinefile_show_html_erb___1520553419135963886_70210265686120'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (102.5ms)
+
+
+Started GET "/" for ::1 at 2016-09-09 10:28:26 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 556ms (Views: 537.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/css/bootstrap.min.css" for ::1 at 2016-09-09 10:28:27 +0100
+
+ActionController::RoutingError (No route matches [GET] "/css/bootstrap.min.css"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (91.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (81.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (157.6ms)
+
+
+Started POST "/users/1/cinefile" for ::1 at 2016-09-09 10:28:31 +0100
+Processing by CinefileController#create as HTML
+  Parameters: {"authenticity_token"=>"yLyldyXrvYa2YRJf44FarSxUJeuveSwDXA54G9TywWB+CkwyD8K6GlzRLpW6duxY92VSOMY7xjkAbcD+RGCEIA==", "user_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.5ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+Redirected to http://localhost:3000/users/1/cinefile/1
+Completed 302 Found in 36ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/1/cinefile/1" for ::1 at 2016-09-09 10:28:31 +0100
+Processing by CinefileController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.3ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mListFilm Load (0.4ms)[0m  [1mSELECT "list_films".* FROM "list_films" WHERE "list_films"."cinefile_id" = $1[0m  [["cinefile_id", 1]]
+  [1m[35mFilm Load (0.6ms)[0m  SELECT "films".* FROM "films"
+  Rendered cinefile/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 127ms (Views: 89.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users/1/cinefile/css/bootstrap.min.css" for ::1 at 2016-09-09 10:28:32 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/cinefile/css/bootstrap.min.css"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (121.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (122.2ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:28:36 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.3ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.6ms)
+
+SyntaxError (/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/list_films/new.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/list_films/new.html.erb:21: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (109.1ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:28:57 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.3ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (755.6ms)
+Completed 500 Internal Server Error in 766ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (wrong number of arguments (given 1, expected 3..4)):
+    3: <% @search.query(params[:search]) %>
+    4: <% results = @search.fetch %>
+    5: <% @search.fetch[0..results.length].each do |film| %>
+    6: <%= options_from_collection_for_select(film) %>
+    7: <option>
+    8:  <%= film['title'] %>
+    9: (<%= film['release_date'][0..3] %>)
+  app/views/list_films/new.html.erb:6:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237314323860'
+  app/views/list_films/new.html.erb:5:in `each'
+  app/views/list_films/new.html.erb:5:in `_app_views_list_films_new_html_erb__2519390246336283178_70237314323860'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (98.3ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:29:54 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.2ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/list_films/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.2ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:30:15 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.2ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/list_films/new.html.erb:17: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.5ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:30:26 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.2ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:15: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/list_films/new.html.erb:15: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.4ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:30:36 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.2ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:13: syntax error, unexpected keyword_end, expecting end-of-input
+ end 
+    ^):
+  app/views/list_films/new.html.erb:13: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.6ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:30:45 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.1ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (1164.9ms)
+Completed 500 Internal Server Error in 1171ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (wrong number of arguments (given 1, expected 3..4)):
+    3: <% @search.resource('movie') %>
+    4: <% @search.query(params[:search]) %>
+    5: <% results = @search.fetch %>
+    6: <%= options_from_collection_for_select(@search.fetch[0..results.length]) %>
+    7: <option>
+    8:  <%= film['title'] %>
+    9: (<%= film['release_date'][0..3] %>)
+  app/views/list_films/new.html.erb:6:in `_app_views_list_films_new_html_erb__2519390246336283178_70237374537500'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.5ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:35:16 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.4ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+SyntaxError (/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/list_films/new.html.erb:12: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/list_films/new.html.erb:14: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.2ms)
+
+
+Started POST "/__web_console/repl_sessions/9cf1a3ebee2dcc47ebd914ebf7c0fe1d/trace" for ::1 at 2016-09-09 10:35:36 +0100
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:35:36 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.1ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (871.7ms)
+Completed 500 Internal Server Error in 878ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `title' for #<Hash:0x007fc2d15798d8>):
+     6: 
+     7: 
+     8: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+     9: <%= select_tag "films", options_from_collection_for_select(@search.fetch[0..results.length], "imdb_id", "title"), prompt: "Select something" %>
+    10: <%= f.submit %>
+    11: <% end %>
+  app/views/list_films/new.html.erb:9:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237348382960'
+  app/views/list_films/new.html.erb:8:in `_app_views_list_films_new_html_erb__2519390246336283178_70237348382960'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.6ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:36:12 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.2ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (1172.6ms)
+Completed 500 Internal Server Error in 1179ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `title' for #<Hash:0x007fc2d3b412f0>):
+     7: 
+     8: 
+     9: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+    10: <%= select_tag "films", options_from_collection_for_select(@search.fetch[0..results.length], "imdb_id", "title"), prompt: "Select something" %>
+    11: <%= f.submit %>
+    12: <% end %>
+  app/views/list_films/new.html.erb:10:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237376174240'
+  app/views/list_films/new.html.erb:9:in `_app_views_list_films_new_html_erb__2519390246336283178_70237376174240'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.6ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:36:29 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.3ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (733.8ms)
+Completed 500 Internal Server Error in 743ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `title' for #<Hash:0x007fc2cd644aa0>):
+     8: 
+     9: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+    10: binding.pry
+    11: <%= select_tag "films", options_from_collection_for_select(@search.fetch[0..results.length], "imdb_id", "title"), prompt: "Select something" %>
+    12: <%= f.submit %>
+    13: <% end %>
+  app/views/list_films/new.html.erb:11:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237371488420'
+  app/views/list_films/new.html.erb:9:in `_app_views_list_films_new_html_erb__2519390246336283178_70237371488420'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.2ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=Indiana+Jones" for ::1 at 2016-09-09 10:36:44 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Indiana Jones", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCinefile Load (0.1ms)[0m  SELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (1181.5ms)
+Completed 500 Internal Server Error in 1189ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `title' for #<Hash:0x007fc2d4923120>):
+     8: 
+     9: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+    10: console
+    11: <%= select_tag "films", options_from_collection_for_select(@search.fetch[0..results.length], "imdb_id", "title"), prompt: "Select something" %>
+    12: <%= f.submit %>
+    13: <% end %>
+  app/views/list_films/new.html.erb:11:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237372899220'
+  app/views/list_films/new.html.erb:9:in `_app_views_list_films_new_html_erb__2519390246336283178_70237372899220'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.7ms)
+
+
+Started PUT "/__web_console/repl_sessions/c3aba490156c2858156d01c2711ba265" for ::1 at 2016-09-09 10:36:57 +0100
+
+
+Started PUT "/__web_console/repl_sessions/a6793e4372f59f21af4558c3f3a306b7" for ::1 at 2016-09-09 10:37:10 +0100
+
+
+Started GET "/" for ::1 at 2016-09-09 10:38:06 +0100
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 82ms (Views: 80.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/css/bootstrap.min.css" for ::1 at 2016-09-09 10:38:06 +0100
+
+ActionController::RoutingError (No route matches [GET] "/css/bootstrap.min.css"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (140.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (160.4ms)
+
+
+Started POST "/users/1/cinefile" for ::1 at 2016-09-09 10:38:08 +0100
+Processing by CinefileController#create as HTML
+  Parameters: {"authenticity_token"=>"VWwRDmTv6HrFtMeBHuvXhs3vsKmSAqSPU/MImuxP9yDj2vhLTsbv5i8E+0tHHGFzFt7HevtATrUPkLB/fN2yYA==", "user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.2ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+Redirected to http://localhost:3000/users/1/cinefile/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/cinefile/1" for ::1 at 2016-09-09 10:38:08 +0100
+Processing by CinefileController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.1ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mListFilm Load (0.3ms)[0m  SELECT "list_films".* FROM "list_films" WHERE "list_films"."cinefile_id" = $1  [["cinefile_id", 1]]
+  [1m[36mFilm Load (0.2ms)[0m  [1mSELECT "films".* FROM "films"[0m
+  Rendered cinefile/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/cinefile/css/bootstrap.min.css" for ::1 at 2016-09-09 10:38:08 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/1/cinefile/css/bootstrap.min.css"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/adamjbrowner/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (98.2ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:38:11 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.2ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (941.5ms)
+Completed 500 Internal Server Error in 947ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (wrong number of arguments (given 2, expected 3..4)):
+     6: 
+     7: 
+     8: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+     9: <%= select_tag "films", options_from_collection_for_select(@search.fetch[0..results.length], "imdb_id"), prompt: "Select something" %>
+    10: <%= f.submit %>
+    11: <% end %>
+  app/views/list_films/new.html.erb:9:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237326874320'
+  app/views/list_films/new.html.erb:8:in `_app_views_list_films_new_html_erb__2519390246336283178_70237326874320'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.1ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:38:22 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.2ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (488.1ms)
+Completed 500 Internal Server Error in 497ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `title' for #<Hash:0x007fc2ccdf2730>):
+     6: 
+     7: 
+     8: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+     9: <%= select_tag "films", options_from_collection_for_select(@search.fetch[0..results.length], "imdb_id", "title"), prompt: "Select something" %>
+    10: <%= f.submit %>
+    11: <% end %>
+  app/views/list_films/new.html.erb:9:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237315633120'
+  app/views/list_films/new.html.erb:8:in `_app_views_list_films_new_html_erb__2519390246336283178_70237315633120'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.5ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:38:48 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.1ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (979.9ms)
+Completed 500 Internal Server Error in 987ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `imdb_id' for #<#<Class:0x007fc2cd16f6b0>:0x007fc2d3a009e0>):
+     6: 
+     7: 
+     8: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+     9: <%= select_tag "films", options_from_collection_for_select(@search.fetch[0..results.length], [imdb_id], [title]), prompt: "Select something" %>
+    10: <%= f.submit %>
+    11: <% end %>
+  app/views/list_films/new.html.erb:9:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237372062440'
+  app/views/list_films/new.html.erb:8:in `_app_views_list_films_new_html_erb__2519390246336283178_70237372062440'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.5ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:39:29 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.2ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (528.9ms)
+Completed 500 Internal Server Error in 535ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `title' for #<#<Class:0x007fc2cd16f6b0>:0x007fc2d3b60290>):
+     6: 
+     7: 
+     8: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+     9: <%= select_tag "films", options_from_collection_for_select(@search.fetch[0..results.length], [title], [title]), prompt: "Select something" %>
+    10: <%= f.submit %>
+    11: <% end %>
+  app/views/list_films/new.html.erb:9:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237376141160'
+  app/views/list_films/new.html.erb:8:in `_app_views_list_films_new_html_erb__2519390246336283178_70237376141160'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.0ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:39:52 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.1ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (941.1ms)
+Completed 500 Internal Server Error in 948ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `title' for #<#<Class:0x007fc2cd16f6b0>:0x007fc2cd69d2b8>):
+     6: 
+     7: 
+     8: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+     9: <%= select_tag "films", options_from_collection_for_select(@search.fetch, [title], [title]), prompt: "Select something" %>
+    10: <%= f.submit %>
+    11: <% end %>
+  app/views/list_films/new.html.erb:9:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237370227720'
+  app/views/list_films/new.html.erb:8:in `_app_views_list_films_new_html_erb__2519390246336283178_70237370227720'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.5ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:47:32 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.1ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:18: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/list_films/new.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/list_films/new.html.erb:18: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (109.2ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:47:46 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.3ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    1: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+    2: <%= f.select :title %>
+    3: <% @search = Tmdb::Search.new %>
+    4: <% @search.resource('movie') %>
+    5: <% @search.query(params[:search]) %>
+  app/views/list_films/new.html.erb:2:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237373351580'
+  app/views/list_films/new.html.erb:1:in `_app_views_list_films_new_html_erb__2519390246336283178_70237373351580'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.2ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:48:07 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.2ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:2: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...er.append=( f.select, "title" );@output_buffer.safe_append='
+...                               ^
+/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:17: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:19: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/list_films/new.html.erb:2: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+  app/views/list_films/new.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+  app/views/list_films/new.html.erb:17: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/list_films/new.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.8ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:48:21 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.2ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:2: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...fer.append=( f.select, :title );@output_buffer.safe_append='
+...                               ^
+/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:17: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/adamjbrowner/Documents/Projects/cinefile/app/views/list_films/new.html.erb:19: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/list_films/new.html.erb:2: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+  app/views/list_films/new.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+  app/views/list_films/new.html.erb:17: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/list_films/new.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.5ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:49:18 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.1ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    1: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+    2: <%= f.select(:title) %>
+    3: <% @search = Tmdb::Search.new %>
+    4: <% @search.resource('movie') %>
+    5: <% @search.query(params[:search]) %>
+  app/views/list_films/new.html.erb:2:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237376058600'
+  app/views/list_films/new.html.erb:1:in `_app_views_list_films_new_html_erb__2519390246336283178_70237376058600'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.0ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:49:36 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.1ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `ref' for #<ListFilm:0x007fc2d5872428>):
+    1: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+    2: <%= f.select(:ref) %>
+    3: <% @search = Tmdb::Search.new %>
+    4: <% @search.resource('movie') %>
+    5: <% @search.query(params[:search]) %>
+  app/views/list_films/new.html.erb:2:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237391389740'
+  app/views/list_films/new.html.erb:1:in `_app_views_list_films_new_html_erb__2519390246336283178_70237391389740'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.1ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:49:46 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.2ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    1: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+    2: <%= f.select(:title) %>
+    3: <% @search = Tmdb::Search.new %>
+    4: <% @search.resource('movie') %>
+    5: <% @search.query(params[:search]) %>
+  app/views/list_films/new.html.erb:2:in `block in _app_views_list_films_new_html_erb__2519390246336283178_70237383151360'
+  app/views/list_films/new.html.erb:1:in `_app_views_list_films_new_html_erb__2519390246336283178_70237383151360'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.2ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:51:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.4ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 6.0ms)
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    1: <%= form_for [@user, @cinefile, @list_film] do |f| %>
+    2: <%= f.select(:film_id) %>
+    3: <% @search = Tmdb::Search.new %>
+    4: <% @search.resource('movie') %>
+    5: <% @search.query(params[:search]) %>
+  app/views/list_films/new.html.erb:2:in `block in _app_views_list_films_new_html_erb__3080697572085645425_70312252337680'
+  app/views/list_films/new.html.erb:1:in `_app_views_list_films_new_html_erb__3080697572085645425_70312252337680'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (51.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (107.7ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 10:54:32 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.2ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (524.1ms)
+Completed 500 Internal Server Error in 531ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `release_date' for #<Hash:0x007fe5b5b08e00>
+Did you mean?  reverse_update):
+    3: <% @search.resource('movie') %>
+    4: <% @search.query(params[:search]) %>
+    5: <% results = @search.fetch %>
+    6: <%= f.select :title, options_from_collection_for_select(@search.fetch[0..results.length], "title", "release_date"),
+    7: :prompt => "Select field" %>
+    8: <% @search.fetch[0..results.length].each do |film| %>
+    9: <option>
+  app/views/list_films/new.html.erb:6:in `block in _app_views_list_films_new_html_erb__3080697572085645425_70312286173040'
+  app/views/list_films/new.html.erb:1:in `_app_views_list_films_new_html_erb__3080697572085645425_70312286173040'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (91.6ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 11:00:19 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.3ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (585.3ms)
+Completed 500 Internal Server Error in 593ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (wrong number of arguments (given 2, expected 3..4)):
+    3: <% @search.resource('movie') %>
+    4: <% @search.query(params[:search]) %>
+    5: <% results = @search.fetch %>
+    6: <%= f.select :title, options_from_collection_for_select(@search.fetch[0..results.length], "title"),
+    7: :prompt => "Select field" %>
+    8: <% @search.fetch[0..results.length].each do |film| %>
+    9: <option>
+  app/views/list_films/new.html.erb:6:in `block in _app_views_list_films_new_html_erb__3080697572085645425_70312252060980'
+  app/views/list_films/new.html.erb:1:in `_app_views_list_films_new_html_erb__3080697572085645425_70312252060980'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.1ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (53.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (122.5ms)
+
+
+Started GET "/users/1/cinefile/1/list_films/new?utf8=%E2%9C%93&search=asdf" for ::1 at 2016-09-09 11:00:39 +0100
+Processing by ListFilmsController#new as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdf", "user_id"=>"1", "cinefile_id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCinefile Load (0.4ms)[0m  [1mSELECT  "cinefiles".* FROM "cinefiles" WHERE "cinefiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered list_films/new.html.erb within layouts/application (500.8ms)
+Completed 500 Internal Server Error in 512ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `release_date' for #<Hash:0x007fe5b3248b50>
+Did you mean?  reverse_update):
+    3: <% @search.resource('movie') %>
+    4: <% @search.query(params[:search]) %>
+    5: <% results = @search.fetch %>
+    6: <%= f.select :title, options_from_collection_for_select(@search.fetch[0..results.length], "title", "release_date"),
+    7: :prompt => "Select field" %>
+    8: <% @search.fetch[0..results.length].each do |film| %>
+    9: <option>
+  app/views/list_films/new.html.erb:6:in `block in _app_views_list_films_new_html_erb__3080697572085645425_70312254714520'
+  app/views/list_films/new.html.erb:1:in `_app_views_list_films_new_html_erb__3080697572085645425_70312254714520'
+
+
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.3ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/adamjbrowner/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (103.8ms)
