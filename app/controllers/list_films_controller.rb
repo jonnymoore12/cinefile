@@ -4,6 +4,7 @@ class ListFilmsController < ApplicationController
     @user = current_user
     @cinefile = @user.cinefile
     @list_film = ListFilm.new
+    @filmtemp = Film.new
   end
 
   def create
