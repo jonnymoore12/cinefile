@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 20160908172754) do
     t.string   "title"
   end
 
-  add_index "list_films", ["cinefile_id"], name: "index_list_film_on_cinefile_id", using: :btree
-  add_index "list_films", ["film_id"], name: "index_list_film_on_film_id", using: :btree
+  add_index "list_films", ["cinefile_id"], name: "index_list_films_on_cinefile_id", using: :btree
+  add_index "list_films", ["film_id"], name: "index_list_films_on_film_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
