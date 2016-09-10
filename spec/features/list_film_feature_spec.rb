@@ -20,7 +20,7 @@ feature "Adding films to cinefile" do
       visit '/'
       click_link "Cinefile"
       click_button "Search for film"
-      # select "to_s", :from => "films"
+      # Needs more here!
     end
   end
 end
