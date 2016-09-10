@@ -6,19 +6,9 @@
   <% @search.query(params[:search]) %>
   <% @results = @search.fetch %>
 
-  <% @select_list = @results.collect {|movie| [ movie['title'] + " " + movie['release_date'][0..3], movie['title'] + "," + movie['release_date'] + "," + movie['id'].to_s ] } %>
+  <% @select_list = @results.collect {|movie| [ movie['title'] + " " + movie['release_date'][0..3], movie['title'] + "," + movie['release_date'][0..3] + "," + movie['id'].to_s ] } %>
 
   <%= select_tag "film_record", options_for_select(@select_list) %>
 
   <%= f.submit %>
 <% end %>
-
-
-<!-- @better_results = [
-  search_object, search_object
-]
-
-@results.each do |result|
-  #result["title"]
-  result.title
-end -->
