@@ -5,9 +5,7 @@ feature "Cinefiles" do
 
     scenario 'A Cinefile link is available to signed in users' do
       sign_up
-      within(".navbar-right") do
-        click_link("Cinefile")
-      end
+      click_link_cinefile
       expect(page).to have_content "Welcome to test's Cinefile"
     end
   end
