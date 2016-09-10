@@ -5,14 +5,20 @@
   <% @search.resource('movie') %>
   <% @search.query(params[:search]) %>
   <% @results = @search.fetch %>
-  <% #@titles = %>
+
+  <% @select_list = @results.collect {|movie| [ movie['title'] + " " + movie['release_date'][0..3], movie['title'] + "," + movie['release_date'] + "," + movie['id'].to_s ] } %>
+
+  <%= select_tag "film_record", options_for_select(@select_list) %>
+
+  <%= f.submit %>
+<% end %>
 
 
-  <%#= select_tag "films", options_from_collection_for_select(results, "imdb_id", "title"), prompt: "Select something" %>
-  <%#= form_for @film do |f| %>
-    <%= select_tag "films", options_from_collection_for_select(@results, 'to_s', to_s), prompt: "Select something" %>
-    <%= f.submit %>
-  <% end %>
+<!-- @better_results = [
+  search_object, search_object
+]
 
-
-  <%#= select_tag "films", options_from_collection_for_select(@films, "imdb_id", "title"), prompt: "Select something" %>
+@results.each do |result|
+  #result["title"]
+  result.title
+end -->
