@@ -1,0 +1,9 @@
+<h3>List of All Locally Stored Films - Temp Code</h3>
+
+<% if @films.any? %>
+  <% @films.each do |film| %><br>
+    <%= film.title %><br>
+    <%= film.tmdb_id %><br>
+    <%= link_to "Delete", film_path(film), method: :delete %> <br>
+  <% end %>
+<% end %>

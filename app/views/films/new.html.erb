@@ -1,21 +1,24 @@
-  <!-- <%= form_for [@user, @cinefile, @film] do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.submit "Add to Cinefile" %>
-<% end %> -->
+  <%= form_for [@film] do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :tmdb_id %>
+    <%= f.text_field :tmdb_id %>
+  <%= f.submit "Add Film" %>
+<% end %>
 
-<select>
-<% @search = Tmdb::Search.new %>
-<% @search.resource('movie') %>
-<% @search.query(params[:search]) %>
-<% results = @search.fetch %>
-<% @search.fetch[0..results.length].each do |film| %>
+
+<!-- <select>
+<%# @search = Tmdb::Search.new %>
+<%# @search.resource('movie') %>
+<%# @search.query(params[:search]) %>
+<%# results = @search.fetch %>
+<%# @search.fetch[0..results.length].each do |film| %>
 <option>
- <%= film['title'] %>
-(<%= film['release_date'][0..3] %>)
+ <%#= film['title'] %>
+(<%#= film['release_date'][0..3] %>)
 </option>
  <br>
-<% end %>
+<%# end %>
 </select>
 
-<%= button_to "Add film" %>
+<%#= button_to "Add film" %> -->

@@ -6,11 +6,11 @@ class CinefileController < ApplicationController
 
   def create
     @user = current_user
-   if @user.cinefile.nil?
-     @cinefile = Cinefile.create
-     @user.cinefile = @cinefile
-   end
-     redirect_to user_cinefile_path(@user.id, @user.cinefile.id)
+      if @user.cinefile.nil?
+       @cinefile = Cinefile.create
+       @user.cinefile = @cinefile
+      end
+    redirect_to user_cinefile_path(@user.id, @user.cinefile.id)
   end
 
   def show
@@ -28,5 +28,4 @@ class CinefileController < ApplicationController
     end
     @list_film = ListFilm.new
   end
-
 end

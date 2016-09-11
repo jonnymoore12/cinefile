@@ -1,20 +1,29 @@
 class FilmsController < ApplicationController
-  #
-  # def new
+  def index
+    @films = Film.all
+  end
+
+  def new
   #   @user = current_user
   #   @cinefile = Cinefile.find(params[:cinefile_id])
-  #   @film = Film.new
-  # end
+    @film = Film.new
+  end
   #
- def create
-   @film = Film.create(film_params)
-redirect_to '/'
+  def create
+    @film = Film.create(film_params)
+   #@film = Film.create(film_params)
+    redirect_to '/'
   #   @user = current_user
   #   @cinefile = Cinefile.find(params[:cinefile_id])
   #   @user.cinefile.films.create(film_params)
   #   redirect_to user_cinefile_path(@user.id, @cinefile.id)
- end
-  #
+  end
+
+  def destroy
+    @film = Film.find(params[:id])
+    @film.delete
+    redirect_to films_path
+  end
   # def destroy
   #   @user = current_user
   #   @cinefile = Cinefile.find(params[:cinefile_id])
@@ -27,9 +36,10 @@ redirect_to '/'
   # private
   #
   def film_params
+    params.require(:film).permit(:title, :tmdb_id)
     # Obviously this needs fixing!
-    params_to_split = params[:film_record]
-    params[:film_record] = params[:film_record].split(",")
+    # params_to_split = params[:film_record]
+    # params[:film_record] = params[:film_record].split(",")
     # Need code to define this (see total params hash below!)
   end
 
