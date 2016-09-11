@@ -16,11 +16,11 @@ class FilmsController < ApplicationController
         flash[:notice] = 'Film already in db'
         redirect_to '/'
       else
-        redirect_to '/films/new', alert: 'Some other problem'
+        flash[:notice] = 'Some other problem'
+        redirect_to '/films/new'
       end
     end
   end
-
 
   def destroy
     @film = Film.find(params[:id])
