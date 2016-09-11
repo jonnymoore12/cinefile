@@ -20,3 +20,10 @@ def click_link_cinefile
     click_link("Cinefile")
   end
 end
+
+def add_film_temp
+  visit 'films/new'
+  fill_in "Title", with: "Jaws"
+  fill_in "Tmdb", with: "200"
+  click_button "Add Film"
+end
