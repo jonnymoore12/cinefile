@@ -9,7 +9,7 @@ class FilmsController < ApplicationController
   #
   def create
     @film = Film.create(film_params)
-    redirect_to '/'
+    redirect_to '/films'
   end
 
   def destroy
