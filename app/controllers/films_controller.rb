@@ -6,11 +6,21 @@ class FilmsController < ApplicationController
   def new
     @film = Film.new
   end
-  #
+
   def create
     @film = Film.create(film_params)
-    redirect_to '/films'
+    if @film.save
+      redirect_to '/films'
+    else
+      if @film.errors[:tmdb_id]
+        flash[:notice] = 'Film already in db'
+        redirect_to '/'
+      else
+        redirect_to '/films/new', alert: 'Some other problem'
+      end
+    end
   end
+
 
   def destroy
     @film = Film.find(params[:id])
