@@ -1,5 +1,5 @@
 feature "#Homepages" do
-  it "The first page is the homepage" do
+  it "There is a homepage welcoming users to Cinefile" do
     visit '/'
     expect(page).to have_content("Welcome to Cinefile!")
   end

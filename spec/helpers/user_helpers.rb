@@ -14,3 +14,9 @@ def add_film
   fill_in "Title", with: "Indiana Jones"
   click_button "Add to Cinefile"
 end
+
+def click_link_cinefile
+  within(".navbar-right") do
+    click_link("Cinefile")
+  end
+end

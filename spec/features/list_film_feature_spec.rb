@@ -18,8 +18,7 @@ feature "Adding films to cinefile" do
     scenario 'film already exists in local database' do
       sign_up
       visit '/'
-      click_link "Cinefile"
-      click_button "Search for film"
+      click_link_cinefile
       # Needs more here!
     end
   end
