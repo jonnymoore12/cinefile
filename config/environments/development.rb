@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  Tmdb::Api.key("b10c09b2837a366224cb8f7089f5ada0")
+  Tmdb::Api.key(ENV['TMDB_API_KEY_SECRET'])
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
