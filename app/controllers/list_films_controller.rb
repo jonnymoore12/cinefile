@@ -9,14 +9,14 @@ class ListFilmsController < ApplicationController
   def create
     @user = current_user
     @cinefile = @user.cinefile
-    
+
     @cinefile.list_films.create(list_film_params)
     redirect_to user_cinefile_path(@user.id, @cinefile.id)
   end
 
   def list_film_params
 
-    params.require(:list_film).permit(:tmdb_id)
+    params.require(:list_film).permit(:film_id)
 
   end
 
