@@ -18,11 +18,12 @@ class CinefileController < ApplicationController
     @user = current_user
     @cinefile = @user.cinefile
     @list_films = @cinefile.list_films.all
-    @titles = []
+    @info = []
     @list_films.each do |list_film|
       @films.each do |film|
         if film.id == list_film.film_id
-          @titles << film.title
+          @info << film.title
+          @info << film.release_year
         end
       end
     end
