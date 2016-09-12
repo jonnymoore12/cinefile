@@ -5,7 +5,6 @@ class FilmsController < ApplicationController
   end
 
   def create
-    @films = Film.all
     @user = current_user
     @cinefile = @user.cinefile
     cinefile_id = @cinefile.id
