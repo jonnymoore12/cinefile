@@ -5,15 +5,23 @@ class FilmsController < ApplicationController
   end
 
   def create
-    @films = Film.all
     @user = current_user
     @cinefile = @user.cinefile
     cinefile_id = @cinefile.id
-    # Currently won't have any info like tmdb_id, etc.
-    Film.create(title: params[:film][:title]) if Film.find_by(title: params[:film][:title]).nil?
-    # Find a better way to pull our the id
-    film_id = Film.last.id
-    redirect_to user_cinefile_list_films_path(@user.id, @cinefile.id), method: :post
+    @film_info = params["film_record"].split(",")
+    @title = @film_info[0]
+    film_not_in_database = Film.find_by(title: @title).nil?
+    if film_not_in_database
+      Film.create(title: @title)
+    end
+    film_id = Film.find_by(title: @title).id
+    list_film_not_in_cinefile = ListFilm.find_by(film_id: film_id, cinefile_id: cinefile_id).nil?
+    if list_film_not_in_cinefile
+      ListFilm.create(film_id: film_id, cinefile_id: cinefile_id)
+    else
+      flash[:alert] = "#{@title} had previously been Cinefiled"
+    end
+    redirect_to user_cinefile_path(@user.id, @cinefile.id)
   end
 
 private
