@@ -27,5 +27,13 @@ feature "managing cinefiles" do
       click_button "Create Film"
       expect(page).to have_content "Brazil had previously been Cinefiled"
     end
+
+    scenario "Film and release year are displayed for each film in Cinefile" do
+      fill_in :search, with: 'Brazil'
+      click_button 'Search for film'
+      click_button "Create Film"
+      expect(page).to have_content 'Brazil'
+      expect(page).to have_content '1985'
+    end
   end
 end
