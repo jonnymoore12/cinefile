@@ -12,20 +12,28 @@ feature "managing cinefiles" do
     end
 
     scenario "A user can add a film to their cinefile list" do
-      click_link "Add Film"
-      fill_in 'Title', with: '12 Angry Men'
-      click_button 'Film'
-      expect(page).to have_content '12 Angry Men'
+      fill_in :search, with: 'Brazil'
+      click_button 'Search for film'
+      click_button "Create Film"
+      expect(page).to have_content 'Brazil'
     end
 
     scenario "A user cannot add a film which already exists in their cinefile" do
-      click_link "Add Film"
-      fill_in 'Title', with: '12 Angry Men'
-      click_button 'Film'
-      click_link "Add Film"
-      fill_in 'Title', with: '12 Angry Men'
-      click_button 'Film'
-      expect(page).to have_content "12 Angry Men had previously been Cinefiled"
+      fill_in :search, with: 'Brazil'
+      click_button 'Search for film'
+      click_button "Create Film"
+      fill_in :search, with: 'Brazil'
+      click_button 'Search for film'
+      click_button "Create Film"
+      expect(page).to have_content "Brazil had previously been Cinefiled"
+    end
+
+    scenario "Film and release year are displayed for each film in Cinefile" do
+      fill_in :search, with: 'Brazil'
+      click_button 'Search for film'
+      click_button "Create Film"
+      expect(page).to have_content 'Brazil'
+      expect(page).to have_content '1985'
     end
   end
 end

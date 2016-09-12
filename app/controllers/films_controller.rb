@@ -8,12 +8,15 @@ class FilmsController < ApplicationController
     @user = current_user
     @cinefile = @user.cinefile
     cinefile_id = @cinefile.id
-    @title = params[:film][:title]
-    film_not_in_database = Film.find_by(title: @title).nil?
+    @film_info = params["film_record"].split(",")
+    @film_release_year = @film_info.delete(@film_info[-2])
+    @tmdb_id = @film_info.delete(@film_info[-1])
+    @title = @film_info.join(',')
+    film_not_in_database = Film.find_by(tmdb_id: @tmdb_id).nil?
     if film_not_in_database
-      Film.create(title: @title)
+      Film.create(title: @title, tmdb_id: @tmdb_id, release_year: @film_release_year)
     end
-    film_id = Film.find_by(title: params[:film][:title]).id
+    film_id = Film.find_by(tmdb_id: @tmdb_id).id
     list_film_not_in_cinefile = ListFilm.find_by(film_id: film_id, cinefile_id: cinefile_id).nil?
     if list_film_not_in_cinefile
       ListFilm.create(film_id: film_id, cinefile_id: cinefile_id)
