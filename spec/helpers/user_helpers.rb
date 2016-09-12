@@ -8,11 +8,10 @@ def sign_up
   click_button "Sign up"
 end
 
-def add_film
-  click_link 'CINEFILE'
-  click_button "Add a film"
-  fill_in "Title", with: "Indiana Jones"
-  click_button "Add to Cinefile"
+def add_film(title: 'Brazil')
+  fill_in :search, with: title
+  click_button 'Search for film'
+  click_button "Create Film"
 end
 
 def click_link_cinefile
