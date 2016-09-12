@@ -9,12 +9,12 @@ class FilmsController < ApplicationController
     @user = current_user
     @cinefile = @user.cinefile
     cinefile_id = @cinefile.id
-    film_not_in_database = Film.find_by(title: params[:film][:title]).nil?
     @title = params[:film][:title]
+    film_not_in_database = Film.find_by(title: @title).nil?
     if film_not_in_database
       Film.create(title: @title)
-      film_id = Film.last.id
     end
+    film_id = Film.find_by(title: params[:film][:title]).id
     list_film_not_in_cinefile = ListFilm.find_by(film_id: film_id, cinefile_id: cinefile_id).nil?
     if list_film_not_in_cinefile
       ListFilm.create(film_id: film_id, cinefile_id: cinefile_id)

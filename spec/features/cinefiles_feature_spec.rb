@@ -20,12 +20,12 @@ feature "Cinefiles" do
 
     scenario "A user cannot add a film which already exists in their cinefile" do
       click_link "Add Film"
-      fill_in 'Title', with: 'Jaws'
+      fill_in 'Title', with: '12 Angry Men'
       click_button 'Film'
       click_link "Add Film"
-      fill_in 'Title', with: 'Jaws'
+      fill_in 'Title', with: '12 Angry Men'
       click_button 'Film'
-      expect(page).to have_content "Jaws had previously been Cinefiled"
+      expect(page).to have_content "12 Angry Men had previously been Cinefiled"
     end
   end
 end
