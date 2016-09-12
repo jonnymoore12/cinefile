@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "films" do
+feature "managing films" do
   context 'Adding and deleting films' do
     before do
       visit '/films/new'

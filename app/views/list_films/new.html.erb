@@ -1,5 +1,15 @@
+Adds a new list_film when film_id supplied<br>
 <%= form_for [@user, @cinefile, @list_film] do |f| %>
   <%= f.label :film_id, "Local film id" %>
   <%= f.text_field :film_id %>
   <%= f.submit "Add Id" %>
+<% end %>
+
+<br>
+<br>
+Test code (adds a film if tmdb_id not already found)<br>
+<%= form_for @film do |f| %>
+  <%= f.label :tmdb_id %>
+  <%= f.text_field :tmdb_id %>
+  <%= f.submit "Add Tmdb" %>
 <% end %>

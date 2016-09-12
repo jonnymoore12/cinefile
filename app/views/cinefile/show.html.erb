@@ -1,6 +1,7 @@
-<%= "Welcome to #{@user.username}'s Cinefile" %>
+<%= "Welcome to #{@user.username}'s Cinefile" %><br>
 
 <%= link_to "Add Film", new_user_cinefile_list_film_path(@user, @cinefile) %>
+<br>
 <br>
 
 <% @titles.each do |title| %>
