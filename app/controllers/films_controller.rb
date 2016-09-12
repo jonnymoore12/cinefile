@@ -1,32 +1,34 @@
 class FilmsController < ApplicationController
-  def index
-    @films = Film.all
-  end
 
   def new
     @film = Film.new
   end
-  #
-  def create
-    @film = Film.create(film_params)
-    redirect_to '/'
-  end
 
-  def destroy
-    @film = Film.find(params[:id])
-    @film.delete
-    redirect_to films_path
+  def create
+    @user = current_user
+    @cinefile = @user.cinefile
+    cinefile_id = @cinefile.id
+    @title = params[:film][:title]
+    film_not_in_database = Film.find_by(title: @title).nil?
+    if film_not_in_database
+      Film.create(title: @title)
+    end
+    film_id = Film.find_by(title: params[:film][:title]).id
+    list_film_not_in_cinefile = ListFilm.find_by(film_id: film_id, cinefile_id: cinefile_id).nil?
+    if list_film_not_in_cinefile
+      ListFilm.create(film_id: film_id, cinefile_id: cinefile_id)
+    else
+      flash[:alert] = "#{@title} had previously been Cinefiled"
+    end
+    redirect_to user_cinefile_path(@user.id, @cinefile.id)
   end
 
 private
 
   def film_params
-    params.require(:film).permit(:title, :tmdb_id)
-    # Obviously this needs fixing!
-    # params_to_split = params[:film_record]
-    # params[:film_record] = params[:film_record].split(",")
-    # Need code to define this (see total params hash below!)
+    params.require(:film).permit(:title)
   end
+
 end
 
 # Parameters: {"utf8"=>"✓", "authenticity_token"=>"OCpf2bcXha65yNZIpNPU1iqBgb5W+QZdwunSuJoz3ZlXZv3LtkcSDQZQBYTP9OsRucmrgUJePYMsqH0JIhKdHw==", "film_record"=>"Batman: The Killing Joke,2016,382322", "commit"=>"Create Film"}

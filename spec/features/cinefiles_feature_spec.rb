@@ -3,7 +3,6 @@ require 'rails_helper'
 feature "managing cinefiles" do
   context "User signed in" do
     before do
-      add_film_temp
       sign_up
       click_link_cinefile
     end
@@ -13,12 +12,20 @@ feature "managing cinefiles" do
     end
 
     scenario "A user can add a film to their cinefile list" do
-        click_link "Add Film"
-        films = Film.all
-        filmid = films.last.id
-        fill_in "Local film id", with: filmid
-        click_button "Add Id"
-        expect(page).to have_content("Jaws")
+      click_link "Add Film"
+      fill_in 'Title', with: '12 Angry Men'
+      click_button 'Film'
+      expect(page).to have_content '12 Angry Men'
+    end
+
+    scenario "A user cannot add a film which already exists in their cinefile" do
+      click_link "Add Film"
+      fill_in 'Title', with: '12 Angry Men'
+      click_button 'Film'
+      click_link "Add Film"
+      fill_in 'Title', with: '12 Angry Men'
+      click_button 'Film'
+      expect(page).to have_content "12 Angry Men had previously been Cinefiled"
     end
   end
 end
