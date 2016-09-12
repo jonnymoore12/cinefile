@@ -12,13 +12,13 @@ feature "managing cinefiles" do
       expect(page).to have_content "Welcome to test's Cinefile"
     end
 
-    scenario "A user can add a film to their cinefile list" do
-        click_link "Add Film"
-        films = Film.all
-        filmid = films.last.id
-        fill_in "Local film id", with: filmid
-        click_button "Add Id"
-        expect(page).to have_content("Jaws")
+    scenario "A user can add a film to their cinefile list by local film_id" do
+      click_link "Add Film"
+      films = Film.all
+      filmid = films.last.id
+      fill_in "Local film id", with: filmid
+      click_button "Add Id"
+      expect(page).to have_content("Jaws")
     end
   end
 end

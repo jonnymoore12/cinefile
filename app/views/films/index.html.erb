@@ -5,6 +5,6 @@
     <%= film.title %><br>
     Tmdb_id <%= film.tmdb_id %><br>
     Film_id (local) <%= film.id %><br>
-    <%= link_to "Delete", film_path(film), method: :delete %> <br>
+    <%= link_to "Delete #{film.tmdb_id}", film_path(film), method: :delete %> <br>
   <% end %>
 <% end %>

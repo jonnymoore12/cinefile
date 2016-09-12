@@ -1,15 +1,17 @@
-<%= "Welcome to #{@user.username}'s Cinefile" %>
+<%= "Welcome to #{@user.username}'s Cinefile" %><br>
 
 <%= link_to "Add Film", new_user_cinefile_list_film_path(@user, @cinefile) %>
 <br>
+<br>
 
+<% @titles.each do |title| %>
+  <%= title %><br>
+<% end %>
+
+<!-- Still wanted?
 <%#= form_tag new_user_cinefile_list_film_path(@user.id, @user.cinefile.id), :method => 'get' do %>
   <p>
     <%#= text_field_tag :search, params[:search] %>
     <%#= submit_tag "Search for film", :name => nil %>
   </p>
-<%# end %>
-
-<% @titles.each do |title| %>
-  <%= title %>
-<% end %>
+<%# end %> -->
