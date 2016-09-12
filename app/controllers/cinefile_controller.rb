@@ -18,17 +18,26 @@ class CinefileController < ApplicationController
     @user = current_user
     @cinefile = @user.cinefile
     @list_films = @cinefile.list_films.all
-    @info = []
-    @poster_paths = []
+
+    @films_in_cinefile = []
     @list_films.each do |list_film|
       @films.each do |film|
         if film.id == list_film.film_id
-          @info << film.title
-          @info << film.release_year
-          @poster_paths << film.poster_path
+          @films_in_cinefile << film
         end
       end
     end
-    @list_film = ListFilm.new
+    # @info = []
+    # @poster_paths = []
+    # @list_films.each do |list_film|
+    #   @films.each do |film|
+    #     if film.id == list_film.film_id
+    #       @info << film.title
+    #       @info << film.release_year
+    #       @poster_paths << film.poster_path
+    #     end
+    #   end
+    # end
+    # @list_film = ListFilm.new
   end
 end
