@@ -13,6 +13,27 @@ class CinemasController < ApplicationController
     redirect_to cinemas_path
   end
 
+  def show
+    @cinema = Cinema.find(params[:id])
+  end
+
+  def edit
+    @cinema = Cinema.find(params[:id])
+  end
+
+  def update
+    @cinema = Cinema.find(params[:id])
+    @cinema.update(cinema_params)
+    redirect_to cinemas_path
+  end
+
+  def destroy
+    @cinema = Cinema.find(params[:id])
+    @cinema.destroy
+    flash[:notice] = 'Cinema deleted successfully'
+    redirect_to cinemas_path
+  end
+
 private
 
   def cinema_params
