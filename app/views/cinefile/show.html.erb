@@ -1,20 +1,20 @@
-<%= "Welcome to #{@user.username}'s Cinefile" %>
+<center>
+  <%= "Welcome to #{@user.username}'s Cinefile" %>
 
-<%= form_tag new_film_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search for film", :name => nil %>
-  </p>
-<% end %>
-<br>
+  <%= form_tag new_film_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search for film", :name => nil %>
+    </p>
+  <% end %>
+  <br>
 
-<% @films_in_cinefile.each do |film| %>
-  <%= film.title %>
-  (<%= film.release_year %>)
-  <br />
-  <%= image_tag("http://cf2.imgobject.com/t/p/w500/" + film.poster_path) %>
-  <br />
-  <br />
-  <br />
-  <br />
-<% end %>
+  <% @films_in_cinefile.each do |film| %>
+    <%= film.title %>
+    (<%= film.release_year %>)
+    <br />
+    <%= image_tag("http://cf2.imgobject.com/t/p/w500/" + film.poster_path) %>
+    <%= button_to "Remove", film_path, method: :delete %>
+    <br /><br /><br /><br />
+  <% end %>
+</center>

@@ -5,6 +5,7 @@ class FilmsController < ApplicationController
   end
 
   def create
+    console
     @user = current_user
     @cinefile = @user.cinefile
     cinefile_id = @cinefile.id
@@ -24,6 +25,14 @@ class FilmsController < ApplicationController
     else
       flash[:alert] = "#{@title} had previously been Cinefiled"
     end
+    redirect_to user_cinefile_path(@user.id, @cinefile.id)
+  end
+
+  def destroy
+    console
+    @list_film = ListFilm.find_by(tmdb_id: @tmdb_id)
+    @list_film.destroy
+    flash[:notice] = "Film has been succesfully removed from your Cinefile"
     redirect_to user_cinefile_path(@user.id, @cinefile.id)
   end
 

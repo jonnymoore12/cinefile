@@ -37,5 +37,13 @@ feature "managing cinefiles" do
       add_film(title: 'Fight Club')
       expect(page).to have_css("//img[@src*='http://cf2.imgobject.com/t/p/w500//8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg']")
     end
+
+    scenario "Users can delete films from their cinefile" do
+      add_film
+      expect(page).to have_content "Brazil"
+      click_button 'Remove'
+      expect(page).to_not have_content "Brazil"
+      expect(page).to have_content "Brazil was successfully removed from your Cinefile"
+    end
   end
 end
