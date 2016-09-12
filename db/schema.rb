@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912114354) do
+ActiveRecord::Schema.define(version: 20160912154407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,8 +26,12 @@ ActiveRecord::Schema.define(version: 20160912114354) do
 
   create_table "cinemas", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "address"
+    t.string   "postcode"
+    t.integer  "phone",      limit: 8
+    t.string   "website"
   end
 
   create_table "films", force: :cascade do |t|
@@ -48,10 +52,12 @@ ActiveRecord::Schema.define(version: 20160912114354) do
   add_index "list_films", ["film_id"], name: "index_list_films_on_film_id", using: :btree
 
   create_table "screenings", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "film_id"
     t.integer  "cinema_id"
+    t.date     "screen_date"
+    t.time     "screen_time"
   end
 
   add_index "screenings", ["cinema_id"], name: "index_screenings_on_cinema_id", using: :btree

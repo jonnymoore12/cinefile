@@ -1,0 +1,11 @@
+<%= link_to "Add Cinema", new_cinema_path %> <br>
+
+<% if @cinemas.any? %>
+  <% @cinemas.each do |cinema| %><br>
+    <%= cinema.name %><br>
+    <%= cinema.address%>, <%= cinema.postcode.capitalize %><br>
+    Phone: <%= cinema.phone %><br>
+    Website <%= cinema.website %><br>
+    <%#= link_to "Delete", cinema_path(cinema), method: :delete %> <br>
+  <% end %>
+<% end %>

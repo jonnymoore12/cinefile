@@ -11,8 +11,9 @@ Rails.application.routes.draw do
     end
   end
 
-
   resources :films
+
+  resources :cinemas
 
   root to: "static_pages#home"
 
