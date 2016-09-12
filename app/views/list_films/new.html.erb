@@ -1,0 +1,5 @@
+<%= form_for [@user, @cinefile, @list_film] do |f| %>
+  <%= f.label :film_id, "Local film id" %>
+  <%= f.text_field :film_id %>
+  <%= f.submit "Add Id" %>
+<% end %>
