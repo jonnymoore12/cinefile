@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature "Adding films to cinefile" do
-  context "A user wishes to add a film to her cinefile" do
+feature "list_films - Adding films to cinefile" do
+  context "A user wishes to add a film to their cinefile" do
     Film.create(title: "Jaws")
     xit "A user can add a film" do
       sign_up
@@ -15,7 +15,7 @@ feature "Adding films to cinefile" do
   end
 
   context "check if film already exists locally" do
-    scenario 'film already exists in local database' do
+    xscenario 'film already exists in local database' do
       sign_up
       visit '/'
       click_link_cinefile
