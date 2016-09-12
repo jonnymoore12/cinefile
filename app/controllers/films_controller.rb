@@ -9,9 +9,15 @@ class FilmsController < ApplicationController
     @user = current_user
     @cinefile = @user.cinefile
     cinefile_id = @cinefile.id
-    Film.create(title: params[:film][:title]) if Film.find_by(title: params[:film][:title]).nil?
-    film_id = Film.last.id
-    ListFilm.create(film_id: film_id, cinefile_id: cinefile_id)
+    film_not_in_database = Film.find_by(title: params[:film][:title]).nil?
+    @title = params[:film][:title]
+    if film_not_in_database
+      Film.create(title: @title)
+      film_id = Film.last.id
+      ListFilm.create(film_id: film_id, cinefile_id: cinefile_id)
+    else
+      flash[:alert] = "#{@title} had previously been Cinefiled"
+    end
     redirect_to user_cinefile_path(@user.id, @cinefile.id)
   end
 
