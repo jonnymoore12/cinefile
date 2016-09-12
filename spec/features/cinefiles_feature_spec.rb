@@ -8,7 +8,7 @@ feature "managing cinefiles" do
     end
 
     scenario 'A Cinefile link is available to signed in users' do
-      expect(page).to have_content "Welcome to test's Cinefile"
+      expect(page).to have_content "test's Cinefile"
     end
 
     scenario "A user can add a film to their cinefile list" do
@@ -36,6 +36,16 @@ feature "managing cinefiles" do
     scenario "Film images are included on user's cinefiles" do
       add_film(title: 'Fight Club')
       expect(page).to have_css("//img[@src*='http://cf2.imgobject.com/t/p/w500//8uO0gUM8aNqYLs1OsTBQiXu0fEv.jpg']")
+    end
+
+    scenario "The cinefile displays the total number of films" do
+      add_film(title: 'Fight Club')
+      add_film(title: 'Blade Runner')
+      expect(page).to have_content "Total films: 2"
+    end
+
+    scenario "Users are informed if their Cinefile is empty" do
+      expect(page).to have_content "Your Cinefile is empty :("
     end
   end
 end

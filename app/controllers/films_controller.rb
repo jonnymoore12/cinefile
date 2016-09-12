@@ -27,6 +27,7 @@ class FilmsController < ApplicationController
     redirect_to user_cinefile_path(@user.id, @cinefile.id)
   end
 
+
 private
 
   def film_params
