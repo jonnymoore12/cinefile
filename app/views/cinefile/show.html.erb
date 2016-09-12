@@ -12,3 +12,6 @@
   <%= info %>
   <br />
 <% end %>
+<% @poster_paths.each do |poster| %>
+  <%= image_tag("http://cf2.imgobject.com/t/p/w500/" + poster) %>
+<% end %>
