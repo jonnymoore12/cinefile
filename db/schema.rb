@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160910114621) do
+ActiveRecord::Schema.define(version: 20160912114354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,12 @@ ActiveRecord::Schema.define(version: 20160910114621) do
   end
 
   add_index "cinefiles", ["user_id"], name: "index_cinefiles_on_user_id", using: :btree
+
+  create_table "cinemas", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "films", force: :cascade do |t|
     t.string   "title"
@@ -40,6 +46,16 @@ ActiveRecord::Schema.define(version: 20160910114621) do
 
   add_index "list_films", ["cinefile_id"], name: "index_list_films_on_cinefile_id", using: :btree
   add_index "list_films", ["film_id"], name: "index_list_films_on_film_id", using: :btree
+
+  create_table "screenings", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "film_id"
+    t.integer  "cinema_id"
+  end
+
+  add_index "screenings", ["cinema_id"], name: "index_screenings_on_cinema_id", using: :btree
+  add_index "screenings", ["film_id"], name: "index_screenings_on_film_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -64,4 +80,6 @@ ActiveRecord::Schema.define(version: 20160910114621) do
   add_foreign_key "cinefiles", "users"
   add_foreign_key "list_films", "cinefiles"
   add_foreign_key "list_films", "films"
+  add_foreign_key "screenings", "cinemas"
+  add_foreign_key "screenings", "films"
 end
