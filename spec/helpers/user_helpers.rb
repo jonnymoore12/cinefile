@@ -1,6 +1,6 @@
 def sign_up
   visit '/'
-  click_link "Sign up"
+  click_link "SIGN UP"
   fill_in "Username", with: "test"
   fill_in "Email", with: "example@email.com"
   fill_in "Password", with: "password"
@@ -9,7 +9,7 @@ def sign_up
 end
 
 def add_film
-  click_link 'Cinefile'
+  click_link 'CINEFILE'
   click_button "Add a film"
   fill_in "Title", with: "Indiana Jones"
   click_button "Add to Cinefile"
@@ -17,7 +17,7 @@ end
 
 def click_link_cinefile
   within(".navbar-right") do
-    click_link("Cinefile")
+    click_link("CINEFILE")
   end
 end
 
