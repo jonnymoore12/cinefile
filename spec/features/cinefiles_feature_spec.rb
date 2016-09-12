@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "Cinefiles" do
+feature "managing cinefiles" do
   context "User signed in" do
     before do
       sign_up
