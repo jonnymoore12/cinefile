@@ -3,12 +3,6 @@
 <%= link_to "Add Film", new_film_path %>
 <br>
 
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
 <%#= form_tag new_user_cinefile_list_film_path(@user.id, @user.cinefile.id), :method => 'get' do %>
   <p>
     <%#= text_field_tag :search, params[:search] %>
