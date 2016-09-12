@@ -14,6 +14,9 @@ class FilmsController < ApplicationController
     if film_not_in_database
       Film.create(title: @title)
       film_id = Film.last.id
+    end
+    list_film_not_in_cinefile = ListFilm.find_by(film_id: film_id, cinefile_id: cinefile_id).nil?
+    if list_film_not_in_cinefile
       ListFilm.create(film_id: film_id, cinefile_id: cinefile_id)
     else
       flash[:alert] = "#{@title} had previously been Cinefiled"

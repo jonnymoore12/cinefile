@@ -13,9 +13,9 @@ feature "Cinefiles" do
 
     scenario "A user can add a film to their cinefile list" do
       click_link "Add Film"
-      fill_in 'Title', with: 'Jaws'
+      fill_in 'Title', with: '12 Angry Men'
       click_button 'Film'
-      expect(page).to have_content 'Jaws'
+      expect(page).to have_content '12 Angry Men'
     end
 
     scenario "A user cannot add a film which already exists in their cinefile" do
