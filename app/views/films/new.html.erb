@@ -1,24 +1,5 @@
-<%= form_for [@film] do |f| %>
-  <%= f.label :title %>
+<%= form_for @film, :url => {:action => "create"} do |f| %>
+  <%= f.label :title, "Title" %>
   <%= f.text_field :title %>
-  <%= f.label :tmdb_id %>
-  <%= f.text_field :tmdb_id %>
-  <%= f.submit "Add Film" %>
+  <%= f.submit "Film" %>
 <% end %>
-
-
-<!-- <select>
-<%# @search = Tmdb::Search.new %>
-<%# @search.resource('movie') %>
-<%# @search.query(params[:search]) %>
-<%# results = @search.fetch %>
-<%# @search.fetch[0..results.length].each do |film| %>
-<option>
- <%#= film['title'] %>
-(<%#= film['release_date'][0..3] %>)
-</option>
- <br>
-<%# end %>
-</select>
-
-<%#= button_to "Add film" %> -->
