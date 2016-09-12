@@ -8,7 +8,13 @@
 <% end %>
 <br>
 
-<% @info.each do |info| %>
-  <%= info %>
+<% @films_in_cinefile.each do |film| %>
+  <%= film.title %>
+  (<%= film.release_year %>)
+  <br />
+  <%= image_tag("http://cf2.imgobject.com/t/p/w500/" + film.poster_path) %>
+  <br />
+  <br />
+  <br />
   <br />
 <% end %>
