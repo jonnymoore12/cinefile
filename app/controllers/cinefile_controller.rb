@@ -23,6 +23,7 @@ class CinefileController < ApplicationController
         @upcoming_screenings << screening
       end
     end
+    binding.pry
     @user = current_user
     @cinefile = @user.cinefile
     @list_films = @cinefile.list_films.all

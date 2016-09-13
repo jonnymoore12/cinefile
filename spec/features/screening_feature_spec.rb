@@ -2,7 +2,9 @@ require 'rails_helper'
 require "pry"
 
 feature "Screenings" do
-  before { Screening.create tmdb_id: '68', screen_date: Time.now + 86400 }
+  let!(:film) { Film.create title: 'Brazil' }
+  before { Screening.create film_id: film.id, screen_date: Time.now + 86400 }
+
   context "A user wants to know about upcoming screenings" do
     scenario "User's are notified of an upcoming screening for a film on their Cinefile" do
       sign_up

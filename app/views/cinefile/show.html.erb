@@ -25,7 +25,7 @@
       <% end %>
     <% end %>
     <% @upcoming_screenings.each do |screening| %>
-      <% if film.tmdb_id == screening.tmdb_id %>
+      <% if film.id == screening.film_id %>
         <%= "#{film.title} has an upcoming screening" %>
       <% end %>
     <% end %>
