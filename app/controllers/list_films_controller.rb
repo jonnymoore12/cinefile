@@ -1,7 +1,6 @@
 class ListFilmsController < ApplicationController
 
   def destroy
-    console
     @user = current_user
     @cinefile = @user.cinefile
     @list_film = ListFilm.find(params[:id])
