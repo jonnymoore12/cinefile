@@ -6,7 +6,7 @@
  * Images for films in Cinefile
  * Tests tidying
  * Models set up for cinema's and screenings
- *
+ 
 
 ### Struggles
  * Screenings associations
@@ -16,4 +16,3 @@
  * Screenings associations and routes
  * Linking screening to films
  * Linking screening to cinefiles
- 

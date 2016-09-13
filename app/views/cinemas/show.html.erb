@@ -1,4 +1,9 @@
 <%= @cinema.name %><br>
 <%= @cinema.address %> ,<%= @cinema.postcode %><br>
 Phone: <%= @cinema.phone %><br>
-<%= @cinema.website %><br>
+Website: <%= @cinema.website %><br>
+Screenings: <% @cinema.screenings.all.each do |screening| %>
+<%= screening.film_id %>
+<%= screening.screen_date %>
+<%= screening.screen_time %>
+<% end %>
