@@ -1,3 +1,10 @@
 <%= "Showing at #{@cinema.name}" %><br>
+<%= "#{@cinema.phone}" %>
+<%= "#{@cinema.address.split(",")[0]}" %>
+<%= "#{@cinema.address.split(",")[1]}" %>
+<%= "#{@cinema.address.split(",")[2]}" %>
 <%= link_to "Website: #{@cinema.name} Showtimes", @cinema.website %><br>
-<%= @screening.screen_date %><br>
+<%= @screening.screen_date.strftime('%A') %>
+<%= @screening.screen_date.day %>
+<%= @screening.screen_date.strftime('%B') %>
+<%= @screening.screen_date.year %>
