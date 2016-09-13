@@ -24,6 +24,9 @@
         <% @list_film = list_film %>
       <% end %>
     <% end %>
+    <% if film.upcoming_screening? %>
+      <%= "#{film.title} has an upcoming screening" %>
+    <% end %>
     <%= button_to "Remove", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete %>
     <br /><br /><br /><br />
   <% end %>

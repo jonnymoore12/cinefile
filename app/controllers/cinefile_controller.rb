@@ -1,4 +1,5 @@
 class CinefileController < ApplicationController
+  require "pry"
 
   def index
 
