@@ -25,7 +25,16 @@
       <% end %>
     <% end %>
     <% if film.upcoming_screening? %>
+      <br />
       <%= "#{film.title} has an upcoming screening" %>
+      <% @cinemas.each do |cinema| %>
+        <% screenings = cinema.screenings.all %>
+        <% screenings.each do |screening| %>
+          <% if screening.film_id == film.id %>
+            <%= button_to "Screening Info", cinema_screening_path(cinema, screening), method: :get %>
+          <% end %>
+        <% end %>
+      <% end %>
     <% end %>
     <%= button_to "Remove", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete %>
     <br /><br /><br /><br />
