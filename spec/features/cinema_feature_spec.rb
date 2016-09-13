@@ -31,7 +31,8 @@ feature "managing cinemas" do
 
     scenario 'let a user edit a cinema' do
      visit '/cinemas'
-     click_link 'Edit Odeon Lee Valley'
+     click_link 'Odeon Lee Valley'
+     click_link 'Edit'
      fill_in 'Name', with: 'Odeon Lee Valley'
      fill_in 'Address', with: "The Brewery, Oxford Passage, St. Margaret's Road, Cheltenham"
      click_button 'Update Cinema'
@@ -46,7 +47,8 @@ feature "managing cinemas" do
 
     scenario 'removes a cinema when a user clicks a delete link' do
       visit '/cinemas'
-      click_link 'Delete Odeon Lee Valley'
+       click_link 'Odeon Lee Valley'
+      click_link 'Delete'
       expect(page).not_to have_content 'Odeon Lee Valley'
       expect(page).to have_content 'Cinema deleted successfully'
     end

@@ -10,8 +10,8 @@ class ScreeningsController < ApplicationController
   def create
     @film = Film.find(params[:film_id])
     @cinema = Cinema.find(params[:cinema_id])
-    @date = params[:screen_date]
-    @time = params[:screen_time]
+    @date = screening_params[:screen_date]
+    @time = screening_params[:screen_time]
     @screening = Screening.create(film_id: @film.id, cinema_id: @cinema.id, screen_date: @date, screen_time: @time)
     redirect_to cinema_path(@cinema)
   end

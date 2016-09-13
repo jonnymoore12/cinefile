@@ -2,15 +2,11 @@
 <% if @cinemas.any? %>
   <% @cinemas.each do |cinema| %><br>
     <%= link_to cinema.name, cinema_path(cinema) %><br>
-    <%= link_to "Edit #{cinema.name}", edit_cinema_path(cinema) %><br>
     <%= cinema.address%>, <%= cinema.postcode %><br>
     Phone: <%= cinema.phone %><br>
     Website: <%= cinema.website %><br>
     Screenings: <% cinema.screenings.all.each do |screening| %>
     <%= screening.film_id %>
    <% end %><br>
-       <%= link_to "Add screening to #{cinema.name}", new_cinema_screening_path(cinema) %> <br>
-    <%= link_to "Delete #{cinema.name}", cinema_path(cinema), method: :delete %> <br>
-
   <% end %>
 <% end %>
