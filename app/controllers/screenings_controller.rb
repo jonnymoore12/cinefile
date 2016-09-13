@@ -17,6 +17,11 @@ class ScreeningsController < ApplicationController
   end
 
   def destroy
+    @cinema = Cinema.find(params[:cinema_id])
+    @screening = Screening.find(params[:id])
+    @screening.destroy
+    flash[:notice] = 'Screening deleted successfully'
+    redirect_to cinema_path(@cinema)
   end
 
   private

@@ -10,7 +10,7 @@ Screenings: <% @cinema.screenings.all.each do |screening| %><br>
 Film_id: <%= screening.film_id %><br>
 Screen_date: <%= screening.screen_date %><br>
 Screen_time: <%= screening.screen_time %><br>
-<%= link_to "Delete screening", cinema_screening_path(@cinema, screening), method: :delete %>
+<%= link_to "Delete screening #{screening.id}", cinema_screening_path(@cinema, screening), method: :delete %>
 <% end %>
 <br>
 <br>
