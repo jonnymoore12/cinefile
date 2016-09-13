@@ -11,3 +11,27 @@ describe Film, type: :model do
     expect(film).to have(1).error_on(:tmdb_id)
   end
 end
+
+describe '#upcoming_screening?' do
+
+  context 'Upcoming screenings' do
+    it 'returns TRUE when there is an upcoming screening within one fortnight' do
+      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
+      screening = Screening.create(film_id: film.id, screen_date: Time.now + 86400)
+      expect(film.upcoming_screening?).to eq 'TRUE'
+    end
+  end
+
+  context 'No upcoming screenings' do
+    it 'returns FALSE when there are no upcoming screenings at all' do
+      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
+      expect(film.upcoming_screening?).to eq 'FALSE'
+    end
+
+    it 'returns FALSE when the only upcoming screenings are not within a fortnight' do
+      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
+      screening = Screening.create(film_id: film.id, screen_date: Time.now + 1300000)
+      expect(film.upcoming_screening?).to eq 'FALSE'
+    end
+  end
+end
