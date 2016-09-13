@@ -52,5 +52,13 @@ feature "Managing cinefiles" do
     scenario "Users are informed if their Cinefile is empty" do
       expect(page).to have_content "Your Cinefile is empty :("
     end
+
+    scenario "Users can delete films from their cinefile" do
+      add_film
+      expect(page).to have_content "Brazil"
+      click_button 'Remove'
+      expect(page).to_not have_content "Brazil"
+      expect(page).to have_content "'Brazil' was successfully removed from your Cinefile"
+    end
   end
 end
