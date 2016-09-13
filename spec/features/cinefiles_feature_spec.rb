@@ -58,7 +58,7 @@ feature "Managing cinefiles" do
       expect(page).to have_content "Brazil"
       click_button 'Remove'
       expect(page).to_not have_content "Brazil"
-      expect(page).to have_content "Brazil was successfully removed from your Cinefile"
+      expect(page).to have_content "'Brazil' was successfully removed from your Cinefile"
     end
   end
 end
