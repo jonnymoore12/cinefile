@@ -23,7 +23,7 @@ feature 'screenings' do
   context "A user wants to know about upcoming screenings" do
     scenario "User's are notified of an upcoming screening for a film on their Cinefile" do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
-      Screening.create(film_id: film.id, screen_date: Time.now + 86400)
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00")
       sign_up
       click_link_cinefile
       add_film
@@ -35,7 +35,7 @@ feature 'screenings' do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
       cinema = Cinema.create(name: 'Curzon Victoria', phone: 03305001331, address: '58 Victoria Street, London, SW1E 6QW',
                             website: 'http://www.curzoncinemas.com/victoria/now-showing')
-      Screening.create(film_id: film.id, screen_date: Time.now + 86400, cinema_id: cinema.id)
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00", cinema_id: cinema.id)
       sign_up
       click_link_cinefile
       add_film
@@ -47,7 +47,7 @@ feature 'screenings' do
       film = Film.create(title: 'Hell or High Water', tmdb_id: '338766', poster_path: '/5GbRKOQSY08U3SQXXcQAKEnL2rE.jpg')
       cinema = Cinema.create(name: 'Curzon Victoria', phone: 03305001331, address: '58 Victoria Street, London, SW1E 6QW',
                             website: 'http://www.curzoncinemas.com/victoria/now-showing')
-      Screening.create(film_id: film.id, screen_date: Time.now + 86400, cinema_id: cinema.id)
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00", cinema_id: cinema.id)
       sign_up
       click_link_cinefile
       add_film(title: 'Hell or High Water')
@@ -58,9 +58,9 @@ feature 'screenings' do
 
     scenario "The address and phone number of the cinema is displayed for each screening " do
       film = Film.create(title: 'Hell or High Water', tmdb_id: '338766', poster_path: '/5GbRKOQSY08U3SQXXcQAKEnL2rE.jpg')
-      cinema = Cinema.create(name: 'Curzon Victoria', phone: 03305001331, address: '58 Victoria Street, London, SW1E 6QW',
-                            website: 'http://www.curzoncinemas.com/victoria/now-showing')
-      Screening.create(film_id: film.id, screen_date: Time.now + 86400, cinema_id: cinema.id)
+      cinema = Cinema.create(name: 'Curzon Victoria', phone: 03305001331, address: '58 Victoria Street, London',
+                            postcode: 'SW1E 6QW', website: 'http://www.curzoncinemas.com/victoria/now-showing')
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00", cinema_id: cinema.id)
       sign_up
       click_link_cinefile
       add_film(title: 'Hell or High Water')
@@ -89,7 +89,7 @@ feature 'screenings' do
   context "A user wants to know about upcoming screenings" do
     scenario "User's are notified of an upcoming screening for a film on their Cinefile" do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
-      screening = Screening.create(film_id: film.id, screen_date: Time.now + 86400)
+      screening = Screening.create(film_id: film.id, screen_time: "22:00", screen_date: Time.now + 86400)
       sign_up
       click_link_cinefile
       add_film

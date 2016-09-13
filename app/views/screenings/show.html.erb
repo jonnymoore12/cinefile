@@ -1,10 +1,16 @@
-<%= "Showing at #{@cinema.name}" %><br>
-<%= "#{@cinema.phone}" %>
-<%= "#{@cinema.address.split(",")[0]}" %>
-<%= "#{@cinema.address.split(",")[1]}" %>
-<%= "#{@cinema.address.split(",")[2]}" %>
-<%= link_to "Website: #{@cinema.name} Showtimes", @cinema.website %><br>
-<%= @screening.screen_date.strftime('%A') %>
-<%= @screening.screen_date.day %>
-<%= @screening.screen_date.strftime('%B') %>
-<%= @screening.screen_date.year %>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <h2><%="#{@cinema.name}"%></h2>
+
+      <h3><%= @screening.screen_time.strftime('%H:%M') %></h3>
+      <h4><%= @screening.screen_date.strftime('%A %e %B %Y') %></h4>
+      <%= "#{@cinema.address.split(",")[0]}" %><br />
+      <%= "#{@cinema.address.split(",")[1]}" %><br />
+      <%= "#{@cinema.postcode}" %><br />
+      <%= "#{@cinema.phone}" %><br />
+      Website: <%= link_to "#{@cinema.name} Showtimes", @cinema.website %><br>
+
+  </div>
+  <div class="col-md-4"></div>
+</div>
