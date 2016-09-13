@@ -25,6 +25,7 @@
       <% end %>
     <% end %>
     <% if film.upcoming_screening? %>
+      <br />
       <%= "#{film.title} has an upcoming screening" %>
       <% @cinemas.each do |cinema| %>
         <% screenings = cinema.screenings.all %>
