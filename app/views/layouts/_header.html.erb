@@ -1,7 +1,8 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">Cinefile</a>
+      <a href="/" class="pull-left"><%= image_tag("Blue_Logo2.png", :class => "logo") %></a>
+      <!-- <a class="navbar-brand" href="/"><%= image_tag("Blue_Logo.png", :class => "logo") %></a> -->
     </div>
       <ul class='nav navbar-nav navbar-right'>
         <% if user_signed_in? %>
