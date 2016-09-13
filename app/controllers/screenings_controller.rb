@@ -16,6 +16,9 @@ class ScreeningsController < ApplicationController
     redirect_to cinema_path(@cinema)
   end
 
+  def destroy
+  end
+
   private
 
   def screening_params
