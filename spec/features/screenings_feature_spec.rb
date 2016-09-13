@@ -40,7 +40,7 @@ feature 'screenings' do
       click_link_cinefile
       add_film
       click_button "Screening Info"
-      expect(page).to have_content("Showing at Curzon Victoria")
+      expect(page).to have_content("Curzon Victoria")
     end
 
     scenario "A user can access a link to the cinema's website" do
@@ -52,7 +52,7 @@ feature 'screenings' do
       click_link_cinefile
       add_film(title: 'Hell or High Water')
       click_button "Screening Info"
-      expect(page).to have_content("Showing at Curzon Victoria")
+      expect(page).to have_content("Curzon Victoria")
       expect(page).to have_content("Website: Curzon Victoria Showtimes")
     end
 
