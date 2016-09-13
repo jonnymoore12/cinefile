@@ -1,20 +1,24 @@
 <center>
-  <%= "Welcome to #{@user.username}'s Cinefile" %>
+  <h3><%= "#{@user.username}'s Cinefile" %></h3>
+  <br />
+  <% if @films_in_cinefile.count == 0 %>
+    Your Cinefile is empty :(
+  <% else %>
+    Total films: <%= @films_in_cinefile.count %>
+  <% end %>
 
   <%= form_tag new_film_path, :method => 'get' do %>
     <p>
-      <%= text_field_tag :search, params[:search] %>
+      <%= text_field_tag :search, params[:search], :placeholder => "Enter film title..." %>
       <%= submit_tag "Search for film", :name => nil %>
     </p>
   <% end %>
-  <br>
+  <br /><br /><br />
 
   <% @films_in_cinefile.each do |film| %>
-    <%= film.title %>
-    (<%= film.release_year %>)
+    <h4 class="title"><%= film.title %> (<%= film.release_year %>)</h4>
     <br />
-    <%= image_tag("http://cf2.imgobject.com/t/p/w500/" + film.poster_path) %>
-    <%= button_to "Remove", film_path, method: :delete %>
+    <%= image_tag("http://cf2.imgobject.com/t/p/w500/" + film.poster_path, :class => 'img-rounded') %>
     <br /><br /><br /><br />
   <% end %>
 </center>
