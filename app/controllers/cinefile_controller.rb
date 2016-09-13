@@ -16,13 +16,6 @@ class CinefileController < ApplicationController
 
   def show
     @films = Film.all
-    @screenings = Screening.all
-    @upcoming_screenings = []
-    @screenings.each do |screening|
-      if screening.screen_date < Time.now + 604800 and screening.screen_date > Time.now
-        @upcoming_screenings << screening
-      end
-    end
     @user = current_user
     @cinefile = @user.cinefile
     @list_films = @cinefile.list_films.all
