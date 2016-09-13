@@ -18,20 +18,20 @@ describe '#upcoming_screening?' do
     it 'returns TRUE when there is an upcoming screening within one fortnight' do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
       screening = Screening.create(film_id: film.id, screen_date: Time.now + 86400)
-      expect(film.upcoming_screening?).to eq 'TRUE'
+      expect(film.upcoming_screening?).to eq true
     end
   end
 
   context 'No upcoming screenings' do
     it 'returns FALSE when there are no upcoming screenings at all' do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
-      expect(film.upcoming_screening?).to eq 'FALSE'
+      expect(film.upcoming_screening?).to eq false
     end
 
     it 'returns FALSE when the only upcoming screenings are not within a fortnight' do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
       screening = Screening.create(film_id: film.id, screen_date: Time.now + 1300000)
-      expect(film.upcoming_screening?).to eq 'FALSE'
+      expect(film.upcoming_screening?).to eq false
     end
   end
 end

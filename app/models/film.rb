@@ -7,8 +7,8 @@ class Film < ActiveRecord::Base
   validates :tmdb_id, uniqueness: true
 
   def upcoming_screening?
-    return 'TRUE' if upcoming_screenings_within_fortnight?
-    return 'FALSE'
+    return true if upcoming_screenings_within_fortnight?
+    return false
   end
 
   def upcoming_screenings_within_fortnight?

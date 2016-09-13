@@ -1,4 +1,5 @@
 class ScreeningsController < ApplicationController
+  require "pry"
 
   def new
     @cinema = Cinema.find(params[:cinema_id])
@@ -14,6 +15,11 @@ class ScreeningsController < ApplicationController
     @time = screening_params[:screen_time]
     @screening = Screening.create(film_id: @film.id, cinema_id: @cinema.id, screen_date: @date, screen_time: @time)
     redirect_to cinema_path(@cinema)
+  end
+
+  def show
+    @cinema = Cinema.find(params[:cinema_id])
+    @screening = Screening.find(params[:id])
   end
 
   private

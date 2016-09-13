@@ -1,5 +1,4 @@
 class CinefileController < ApplicationController
-  require "pry"
 
   def index
 
@@ -15,6 +14,8 @@ class CinefileController < ApplicationController
   end
 
   def show
+    @cinemas = Cinema.all
+    @screenings = Screening.all
     @films = Film.all
     @user = current_user
     @cinefile = @user.cinefile
