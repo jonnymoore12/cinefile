@@ -13,11 +13,10 @@ describe Film, type: :model do
 end
 
 describe '#upcoming_screening?' do
-
   context 'Upcoming screenings' do
     it 'returns TRUE when there is an upcoming screening within one fortnight' do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
-      screening = Screening.create(film_id: film.id, screen_date: Time.now + 86400)
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400)
       expect(film.upcoming_screening?).to eq true
     end
   end
@@ -30,8 +29,21 @@ describe '#upcoming_screening?' do
 
     it 'returns FALSE when the only upcoming screenings are not within a fortnight' do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
-      screening = Screening.create(film_id: film.id, screen_date: Time.now + 1300000)
+      Screening.create(film_id: film.id, screen_date: Time.now + 1300000)
       expect(film.upcoming_screening?).to eq false
+    end
+  end
+
+  describe '#days_until_nearest_screening' do
+    it 'returns 0 if the nearest screening is later today' do
+      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
+      Screening.create(film_id: film.id, screen_date: Time.now + 100)
+      expect(film.days_until_nearest_screening).to eq 0
+    end
+    it 'returns 1 if the nearest screening is tomorrow' do
+      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400)
+      expect(film.days_until_nearest_screening).to eq 1
     end
   end
 end

@@ -11,6 +11,13 @@ class Film < ActiveRecord::Base
     return false
   end
 
+  def days_until_nearest_screening
+    @array_of_days_until_screenings = screenings.all.map { |screening| screening.screen_date.day - Time.now.day }
+    @array_of_days_until_screenings.min
+  end
+
+private
+
   def upcoming_screenings_within_fortnight?
     @screenings = screenings.all
     screenings_within_the_fortnight = []
@@ -21,4 +28,5 @@ class Film < ActiveRecord::Base
     end
     !screenings_within_the_fortnight.empty?
   end
+
 end
