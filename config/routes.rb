@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   end
 
   resources :cinemas do
-    resources :screenings, :only => [:index, :new, :create, :show]
+    resources :screenings, :only => [:index, :new, :create, :show, :destroy]
   end
 
   root to: "static_pages#home"
