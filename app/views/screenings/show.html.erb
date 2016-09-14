@@ -2,7 +2,6 @@
   <div class="col-md-4"></div>
   <div class="col-md-4">
     <h2><%="#{@cinema.name}"%></h2>
-
       <h3><%= @screening.screen_time.strftime('%H:%M') %></h3>
       <h4><%= @screening.screen_date.strftime('%A %e %B %Y') %></h4>
       <%= "#{@cinema.address.split(",")[0]}" %><br />
