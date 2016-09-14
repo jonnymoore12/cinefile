@@ -28,7 +28,3 @@ class UsersController < ApplicationController
     end
   end
 end
-# @cinemas.each do |cinema|
-#   if cinema.screening_id == film.screening.id
-#     @cinemas_with_screenings << cinema
-#   end
