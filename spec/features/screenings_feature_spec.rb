@@ -96,5 +96,17 @@ feature 'screenings' do
       expect(page).to have_content("Brazil has an upcoming screening")
     end
   end
+
+  context "A user wants to see upcoming screenings for their cinefile" do
+    scenario "A user goes to now showing from their homepage" do
+      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
+      screening = Screening.create(film_id: film.id, screen_time: "22:00", screen_date: Time.now + 86400)
+      sign_up
+      click_link_cinefile
+      add_film
+      visit users_path
+      expect(page).to have_content('22:00')
+    end
+  end
 end
 end

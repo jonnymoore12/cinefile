@@ -1,0 +1,29 @@
+Welcome to <%= @user.username %>'s Cinefile screenings!
+<% @films_with_screenings.each do |film| %>
+<br>
+<br>
+  <h4 class="title"><%= film.title %></h4>
+  <% @list_films.each do |list_film| %>
+    <% if list_film.film_id == film.id %>
+      <% @list_film = list_film %>
+    <% end %>
+  <% end %>
+  <% if film.upcoming_screening? %>
+    <br>
+    <%= "#{film.title} has an upcoming screening" %>
+    <% @films.each do |film| %>
+      <% film.screenings.each do |screening| %>
+        <h3><%= screening.screen_time.strftime('%H:%M') %></h3>
+        <h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4>
+        <% end %>
+    <% end %>
+    <!-- <% @cinemas.each do |cinema| %>
+      <% screenings = cinema.screenings.all %>
+      <% screenings.each do |screening| %>
+        <% if screening.film_id == film.id %>
+          <%= button_to "Screening Info", cinema_screening_path(cinema, screening), method: :get %>
+        <% end %>
+      <% end %> -->
+  <% end %>
+  <% end %>
+<% end %>
