@@ -1,10 +1,10 @@
 <center>
   <h3><%= "#{@user.username}'s Cinefile" %></h3>
   <br />
-  <% if @films_in_cinefile.count == 0 %>
+  <% if @list_count == 0 %>
     Your Cinefile is empty :(
   <% else %>
-    Total films: <%= @films_in_cinefile.count %>
+    Total films: <%= @list_count %>
   <% end %>
 
   <%= form_tag new_film_path, :method => 'get' do %>
@@ -13,30 +13,34 @@
       <%= submit_tag "Search for film", :name => nil %>
     </p>
   <% end %>
-  <br /><br /><br />
+  <br /><br />
 
-  <% @films_in_cinefile.each do |film| %>
-    <h4 class="title"><%= film.title %> (<%= film.release_year %>)</h4>
-    <br />
-    <%= image_tag("http://cf2.imgobject.com/t/p/w500/" + film.poster_path, :class => 'img-rounded') %>
+  <!-- <div class='films_with_upcoming_screenings'> -->
+  <% @films_with_upcoming_screenings.each do |film| %>
+    <h4 class="title_with_screening"><%= film.title %> (<%= film.release_year %>)</h4>
+    <!-- <br /> -->
+    <%= image_tag("http://cf2.imgobject.com/t/p/w500/" + film.poster_path, :class => 'img-rounded img-responsive') %>
     <% @list_films.each do |list_film| %>
       <% if list_film.film_id == film.id %>
         <% @list_film = list_film %>
       <% end %>
     <% end %>
-    <% if film.upcoming_screening? %>
-      <br />
-      <%= "#{film.title} has an upcoming screening" %>
-      <% @cinemas.each do |cinema| %>
-        <% screenings = cinema.screenings.all %>
-        <% screenings.each do |screening| %>
-          <% if screening.film_id == film.id %>
-            <%= button_to "Screening Info", cinema_screening_path(cinema, screening), method: :get %>
-          <% end %>
-        <% end %>
+    <%= button_to "Remove", user_cinefile_list_film_path(@user, @cinefile, @list_film, :class => "btn btn-default" ), method: :delete %>
+    <button type="button" class="btn-info">Screenings</button>
+      <%#= "#{film.title} has an upcoming screening. This could be a link" %>
+      <br>
+  <% end %>
+
+  <% @other_films_in_cinefile.each do |film| %>
+    <h4 class="title"><%= film.title %> (<%= film.release_year %>)</h4>
+    <br />
+    <%= image_tag("http://cf2.imgobject.com/t/p/w500/" + film.poster_path, :class => 'img-rounded img-responsive') %>
+    <% @list_films.each do |list_film| %>
+      <% if list_film.film_id == film.id %>
+        <% @list_film = list_film %>
       <% end %>
     <% end %>
-    <%= button_to "Remove", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete %>
-    <br /><br /><br /><br />
+    <%= button_to "Remove", user_cinefile_list_film_path(@user, @cinefile, @list_film, :class => 'remove-btn' ), method: :delete %>
+    <br /><br /><br />
   <% end %>
 </center>
