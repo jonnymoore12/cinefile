@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :films do
-    resources :screenings do
+    resources :screenings, :only => [:show_screenings_for_film] do
       collection do
         get :show_screenings_for_film
       end
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   end
 
   resources :cinemas do
-    resources :screenings
+    resources :screenings, :only => [:index, :new, :create, :show]
   end
 
   root to: "static_pages#home"
