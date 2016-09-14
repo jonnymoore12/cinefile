@@ -21,13 +21,13 @@ feature 'screenings' do
   end
 
   context "A user wants to know about upcoming screenings" do
-    xscenario "User's are notified of an upcoming screening for a film on their Cinefile" do
-      film = Film.create(title: 'Brazil', tmdb_id: '68')
+    scenario "User's are notified of an upcoming screening for a film on their Cinefile" do
+      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
       Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00")
       sign_up
       click_link_cinefile
       add_film
-      expect(page).to have_content("Brazil has an upcoming screening")
+      expect(page).to have_link("Screenings")
     end
 
   context "Viewing info on a film's screenings" do
@@ -54,7 +54,7 @@ feature 'screenings' do
       sign_up
       click_link_cinefile
       add_film(title: 'Hell or High Water')
-      click_button "Screening Info"
+      click_link "Screenings"
       expect(page).to have_content("Curzon Victoria")
       expect(page).to have_content("Website: Curzon Victoria Showtimes")
     end
@@ -67,7 +67,7 @@ feature 'screenings' do
       sign_up
       click_link_cinefile
       add_film(title: 'Hell or High Water')
-      click_button "Screening Info"
+      click_link "Screenings"
       expect(page).to have_content(03305001331)
       expect(page).to have_content "58 Victoria Street"
       expect(page).to have_content "SW1E 6QW"
@@ -89,14 +89,19 @@ feature 'screenings' do
     end
   end
 
-  context "A user wants to know about upcoming screenings" do
-    xscenario "User's are notified of an upcoming screening for a film on their Cinefile" do
+  context "A user wants to see upcoming screenings for their cinefile" do
+    scenario "A user goes to 'NOW SHOWING' from their homepage and sees info on screening and cinema" do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
-      screening = Screening.create(film_id: film.id, screen_time: "22:00", screen_date: Time.now + 86400)
+      cinema = Cinema.create(name: 'Curzon Victoria', phone: 03305001331, address: '58 Victoria Street, London',
+                            postcode: 'SW1E 6QW', website: 'http://www.curzoncinemas.com/victoria/now-showing')
+      screening = Screening.create(film_id: film.id, screen_time: "22:00", screen_date: Time.now + 86400, cinema_id: cinema.id)
       sign_up
       click_link_cinefile
       add_film
-      expect(page).to have_content("Brazil has an upcoming screening")
+      click_link 'NOW SHOWING'
+      expect(page).to have_content('22:00')
+      expect(page).to have_content('Brazil')
+      expect(page).to have_content('Curzon Victoria')
     end
   end
 end
