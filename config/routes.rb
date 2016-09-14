@@ -23,6 +23,8 @@ Rails.application.routes.draw do
     resources :screenings, :only => [:index, :new, :create, :show, :destroy]
   end
 
+  get "/search" => "search#new_search"
+
   root to: "static_pages#home"
 
   # Example of regular route:

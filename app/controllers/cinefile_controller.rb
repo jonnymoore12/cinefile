@@ -33,5 +33,11 @@ class CinefileController < ApplicationController
         end
       end
     end
+    @film = Film.new
+    if params[:film].nil?
+      @searched_film = nil
+    else
+      @searched_film = params[:film]
+    end
   end
 end
