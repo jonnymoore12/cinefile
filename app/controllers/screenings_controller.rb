@@ -35,6 +35,7 @@ class ScreeningsController < ApplicationController
   def show_screenings_for_film
     @film = Film.find(params[:film_id])
     @screenings = @film.screenings.all
+    @cinemas = Cinema.all
     render '/screenings/show_screenings_for_film.html.erb'
   end
 
