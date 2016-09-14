@@ -6,7 +6,7 @@
     </div>
       <ul class='nav navbar-nav navbar-right'>
         <% if user_signed_in? %>
-        <li><%= link_to "NOW SHOWING", users_path(current_user)
+        <li><%= link_to "NOW SHOWING", now_showing_path
        %></li>
         <li><%= link_to "CINEFILE", user_cinefile_index_path(current_user), method: :post %></li>
           <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>

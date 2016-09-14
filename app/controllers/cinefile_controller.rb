@@ -1,8 +1,5 @@
 class CinefileController < ApplicationController
 
-  def index
-  end
-
   def create
     @user = current_user
       if @user.cinefile.nil?
@@ -39,5 +36,14 @@ class CinefileController < ApplicationController
     else
       @searched_film = params[:film]
     end
+  end
+
+  def now_showing
+    @user = current_user
+      if @user.cinefile.nil?
+       @cinefile = Cinefile.create
+       @user.cinefile = @cinefile
+      end
+    redirect_to user_cinefile_list_films_path(@user.id, @user.cinefile.id)
   end
 end

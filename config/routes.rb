@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  get "/now_showing" => "cinefile#now_showing"
+
   resources :users do
     resources :cinefile do
       resources :list_films
