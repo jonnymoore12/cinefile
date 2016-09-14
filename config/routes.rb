@@ -11,7 +11,13 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :films
+  resources :films do
+    resources :screenings do
+      collection do
+        get :show_screenings_for_film
+      end
+    end
+  end
 
   resources :cinemas do
     resources :screenings

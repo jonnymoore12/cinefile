@@ -1,6 +1,8 @@
 class ScreeningsController < ApplicationController
   require "pry"
-
+  def index
+  end
+  
   def new
     @cinema = Cinema.find(params[:cinema_id])
     @screening = Screening.new
@@ -28,6 +30,12 @@ class ScreeningsController < ApplicationController
     @screening.destroy
     flash[:notice] = 'Screening deleted successfully'
     redirect_to cinema_path(@cinema)
+  end
+
+  def show_screenings_for_film
+    @film = Film.find(params[:film_id])
+    @screenings = @film.screenings.all
+    redirect_to film_screenings_path(@film)
   end
 
   private

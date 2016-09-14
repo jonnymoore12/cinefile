@@ -26,9 +26,8 @@
       <% end %>
     <% end %>
     <%= button_to "Remove", user_cinefile_list_film_path(@user, @cinefile, @list_film, :class => "btn btn-default" ), method: :delete %>
-    <button type="button" class="btn-info">Screenings</button>
-      <%#= "#{film.title} has an upcoming screening. This could be a link" %>
-      <br>
+    <%= link_to "Screenings", show_screenings_for_film_film_screenings_path(film) %>
+    <br>
   <% end %>
 
   <% @other_films_in_cinefile.each do |film| %>
