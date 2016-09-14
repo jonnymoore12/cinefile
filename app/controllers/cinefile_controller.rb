@@ -1,7 +1,6 @@
 class CinefileController < ApplicationController
 
   def index
-
   end
 
   def create
@@ -20,13 +19,25 @@ class CinefileController < ApplicationController
     @user = current_user
     @cinefile = @user.cinefile
     @list_films = @cinefile.list_films.all
-    @films_in_cinefile = []
+    @list_count = @list_films.count
+    @films_with_upcoming_screenings = []
+    @other_films_in_cinefile = []
     @list_films.each do |list_film|
       @films.each do |film|
         if film.id == list_film.film_id
-          @films_in_cinefile << film
+          if film.upcoming_screening?
+            @films_with_upcoming_screenings << film
+          else
+            @other_films_in_cinefile << film
+          end
         end
       end
+    end
+    @film = Film.new
+    if params[:film].nil?
+      @searched_film = nil
+    else
+      @searched_film = params[:film]
     end
   end
 end

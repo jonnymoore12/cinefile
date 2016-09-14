@@ -4,7 +4,7 @@ require "pry"
 feature 'screenings' do
   context "Creating screenings for cinemas" do
     let!(:odeon){ Cinema.create(name: 'Odeon Cheltenham') }
-    let!(:movie){ Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg') }
+    let!(:movie){ Film.create(title: 'Brazil', tmdb_id: '68') }
 
     scenario 'allows admin to create a screening for a cinema' do
 
@@ -27,20 +27,23 @@ feature 'screenings' do
       sign_up
       click_link_cinefile
       add_film
-      expect(page).to have_content("Brazil has an upcoming screening")
+      expect(page).to have_link("Screenings")
     end
 
-  context "Viewing info on specific screenings" do
-    scenario "A user can click through for info on a screening" do
-      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
-      cinema = Cinema.create(name: 'Curzon Victoria', phone: 03305001331, address: '58 Victoria Street, London, SW1E 6QW',
-                            website: 'http://www.curzoncinemas.com/victoria/now-showing')
+  context "Viewing info on a film's screenings" do
+    scenario "Cinema info is available for each film's screening as well as film info " do
+      film = Film.create(title: 'Hell or High Water', tmdb_id: '338766', poster_path: '/5GbRKOQSY08U3SQXXcQAKEnL2rE.jpg')
+      cinema = Cinema.create(name: 'Curzon Victoria', phone: 03305001331, address: '58 Victoria Street, London',
+                            postcode: 'SW1E 6QW', website: 'http://www.curzoncinemas.com/victoria/now-showing')
       Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00", cinema_id: cinema.id)
       sign_up
       click_link_cinefile
-      add_film
-      click_button "Screening Info"
-      expect(page).to have_content("Curzon Victoria")
+      add_film(title: 'Hell or High Water')
+      click_link "Screenings"
+      expect(page).to have_content(03305001331)
+      expect(page).to have_content "58 Victoria Street"
+      expect(page).to have_content "SW1E 6QW"
+      expect(page).to have_content "Hell or High Water"
     end
 
     scenario "A user can access a link to the cinema's website" do
@@ -51,23 +54,9 @@ feature 'screenings' do
       sign_up
       click_link_cinefile
       add_film(title: 'Hell or High Water')
-      click_button "Screening Info"
+      click_link "Screenings"
       expect(page).to have_content("Curzon Victoria")
       expect(page).to have_content("Website: Curzon Victoria Showtimes")
-    end
-
-    scenario "The address and phone number of the cinema is displayed for each screening " do
-      film = Film.create(title: 'Hell or High Water', tmdb_id: '338766', poster_path: '/5GbRKOQSY08U3SQXXcQAKEnL2rE.jpg')
-      cinema = Cinema.create(name: 'Curzon Victoria', phone: 03305001331, address: '58 Victoria Street, London',
-                            postcode: 'SW1E 6QW', website: 'http://www.curzoncinemas.com/victoria/now-showing')
-      Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00", cinema_id: cinema.id)
-      sign_up
-      click_link_cinefile
-      add_film(title: 'Hell or High Water')
-      click_button "Screening Info"
-      expect(page).to have_content(03305001331)
-      expect(page).to have_content "58 Victoria Street"
-      expect(page).to have_content "SW1E 6QW"
     end
   end
 
@@ -93,7 +82,8 @@ feature 'screenings' do
       sign_up
       click_link_cinefile
       add_film
-      expect(page).to have_content("Screening in 3 days!")
+      # Image for 'SCREENING IN 3 DAYS!':
+      expect(page).to have_css("//img[@src*='/assets/3_days-15c16ace40133135bb018054c09da3d2516b7cc0e81aa81b7f76c47b78cfa27a.png']")
     end
 
     scenario "We see the relevant message when the nearest screening is tomorrow" do
@@ -102,7 +92,8 @@ feature 'screenings' do
       sign_up
       click_link_cinefile
       add_film
-      expect(page).to have_content("Screening tomorrow!")
+      # Image for 'SCREENING TOMORROW!':
+      expect(page).to have_css("//img[@src*='/assets/tomorrow-05cdaafd652e33683f752fdab9af5f3aa41cafbd11092f2cbcab5a69a47e8d56.png']")
     end
 
     xscenario "We see the relevant message when the nearest screening is later today" do

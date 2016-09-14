@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-4"><br /><h3>Screenings for:</h3></div>
+  <div class="col-md-4">
+    <h1><%= @film.title %></h1>
+    <% @cinemas.each do |cinema| %>
+      <% cinema_name_used = false %>
+      <% @film.screenings.each do |screening| %>
+        <% if cinema.id == screening.cinema_id %>
+          <% if cinema_name_used == false %>
+            <h2><%="#{cinema.name}"%></h2>
+            <% cinema_name_used = true %>
+          <%= "#{cinema.address.split(",")[0]}" %><br />
+          <%= "#{cinema.address.split(",")[1]}" %><br />
+          <%= "#{cinema.postcode}" %><br />
+          <%= "#{cinema.phone}" %><br />
+          Website: <%= link_to "#{cinema.name} Showtimes", cinema.website %><br>
+          <% end %>
+          <h3><%= screening.screen_time.strftime('%H:%M') %></h3>
+          <h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4>
+        <% end %>
+        <br /><br />
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-md-4"></div>
+</div>

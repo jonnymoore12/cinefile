@@ -45,19 +45,8 @@
             <% @list_film = list_film %>
           <% end %>
         <% end %>
-        <% if film.upcoming_screening? %>
-          <br />
-          <%= "#{film.title} has an upcoming screening" %>
-          <% @cinemas.each do |cinema| %>
-            <% screenings = cinema.screenings.all %>
-            <% screenings.each do |screening| %>
-              <% if screening.film_id == film.id %>
-                <%= button_to "Screening Info", cinema_screening_path(cinema, screening), method: :get %>
-              <% end %>
-            <% end %>
-          <% end %>
-        <% end %>
         <%= button_to "Remove", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete %>
+        <%= link_to "Screenings", show_screenings_for_film_film_screenings_path(film) %>
       </center>
     </div>
     <div class="col-md-3", style="text-align: left;">
@@ -93,18 +82,6 @@
         <% @list_films.each do |list_film| %>
           <% if list_film.film_id == film.id %>
             <% @list_film = list_film %>
-          <% end %>
-        <% end %>
-        <% if film.upcoming_screening? %>
-          <br />
-          <%= "#{film.title} has an upcoming screening" %>
-          <% @cinemas.each do |cinema| %>
-            <% screenings = cinema.screenings.all %>
-            <% screenings.each do |screening| %>
-              <% if screening.film_id == film.id %>
-                <%= button_to "Screening Info", cinema_screening_path(cinema, screening), method: :get %>
-              <% end %>
-            <% end %>
           <% end %>
         <% end %>
         <%= button_to "Remove", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete %>
