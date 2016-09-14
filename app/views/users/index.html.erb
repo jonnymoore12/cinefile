@@ -3,27 +3,23 @@ Welcome to <%= @user.username %>'s Cinefile screenings!
 <br>
 <br>
   <h1 class="title"><%= film.title %></h1>
-  <% @list_films.each do |list_film| %>
-    <% if list_film.film_id == film.id %>
-      <% @list_film = list_film %>
-    <% end %>
-  <% end %>
   <% if film.upcoming_screening? %>
     <br>
     <% @films.each do |film| %>
       <% film.screenings.each do |screening| %>
-        <h3><%= screening.cinema_id.name %><h3>
-        <h3><%= screening.screen_time.strftime('%H:%M') %></h3>
-        <h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4>
+        <% @cinemas.each do |cinema| %>
+          <% if cinema.id == screening.cinema_id %>
+            <h2><%="#{cinema.name}"%></h2>
+              <%= "#{cinema.address.split(",")[0]}" %><br />
+              <%= "#{cinema.address.split(",")[1]}" %><br />
+              <%= "#{cinema.postcode}" %><br />
+              <%= "#{cinema.phone}" %><br />
+              Website: <%= link_to "#{cinema.name} Showtimes", cinema.website %><br>
+              <h3><%= screening.screen_time.strftime('%H:%M') %></h3>
+              <h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4>
+          <% end %>
         <% end %>
+      <% end %>
     <% end %>
-    <!-- <% @cinemas.each do |cinema| %>
-      <% screenings = cinema.screenings.all %>
-      <% screenings.each do |screening| %>
-        <% if screening.film_id == film.id %>
-          <%= button_to "Screening Info", cinema_screening_path(cinema, screening), method: :get %>
-        <% end %>
-      <% end %> -->
-  <% end %>
   <% end %>
 <% end %>

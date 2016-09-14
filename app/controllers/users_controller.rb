@@ -15,7 +15,6 @@ class UsersController < ApplicationController
     @list_films = @cinefile.list_films.all
     @films_in_cinefile = []
     @films_with_screenings = []
-    @cinemas_with_screenings = []
     @list_films.each do |list_film|
       @films.each do |film|
         if film.id == list_film.film_id
@@ -28,7 +27,6 @@ class UsersController < ApplicationController
       end
     end
   end
-  console
   end
 end
 # @cinemas.each do |cinema|
