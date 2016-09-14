@@ -1,28 +1,24 @@
 Welcome to <%= @user.username %>'s Cinefile screenings!
-<% @films_with_screenings.each do |film| %>
-<br>
-<br>
+<% @films_with_upcoming_screenings.each do |film| %>
+  <br>
+  <br>
   <h1 class="title"><%= film.title %></h1>
-  <% if film.upcoming_screening? %>
-    <br>
-    <% @films.each do |film| %>
-      <% @cinemas.each do |cinema| %>
-      <% cinema_name_used = false %>
-        <% film.screenings.each do |screening| %>
-          <% if cinema.id == screening.cinema_id %>
-            <% if cinema_name_used == false %>
-              <h2><%="#{cinema.name}"%></h2>
-              <% cinema_name_used = true %>
-              <%= "#{cinema.address.split(",")[0]}" %><br />
-              <%= "#{cinema.address.split(",")[1]}" %><br />
-              <%= "#{cinema.postcode}" %><br />
-              <%= "#{cinema.phone}" %><br />
-              Website: <%= link_to "#{cinema.name} Showtimes", cinema.website %><br>
-            <% end %>
-            <h3><%= screening.screen_time.strftime('%H:%M') %></h3>
-            <h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4>
-          <% end %>
+  <br>
+  <% @cinemas.each do |cinema| %>
+  <% cinema_name_used = false %>
+    <% film.screenings.each do |screening| %>
+      <% if cinema.id == screening.cinema_id %>
+        <% if cinema_name_used == false %>
+          <h2><%="#{cinema.name}"%></h2>
+          <% cinema_name_used = true %>
+          <%= "#{cinema.address.split(",")[0]}" %><br />
+          <%= "#{cinema.address.split(",")[1]}" %><br />
+          <%= "#{cinema.postcode}" %><br />
+          <%= "#{cinema.phone}" %><br />
+          Website: <%= link_to "#{cinema.name} Showtimes", cinema.website %><br>
         <% end %>
+        <h3><%= screening.screen_time.strftime('%H:%M') %></h3>
+        <h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4>
       <% end %>
     <% end %>
   <% end %>

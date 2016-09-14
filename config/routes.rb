@@ -11,10 +11,16 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :films
+  resources :films do
+    resources :screenings, :only => [:show_screenings_for_film] do
+      collection do
+        get :show_screenings_for_film
+      end
+    end
+  end
 
   resources :cinemas do
-    resources :screenings
+    resources :screenings, :only => [:index, :new, :create, :show]
   end
 
   root to: "static_pages#home"

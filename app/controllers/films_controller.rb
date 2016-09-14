@@ -4,6 +4,10 @@ class FilmsController < ApplicationController
     @film = Film.new
   end
 
+  def index
+    @films = Film.all
+  end
+
   def create
     @user = current_user
     @cinefile = @user.cinefile
@@ -28,12 +32,16 @@ class FilmsController < ApplicationController
     redirect_to user_cinefile_path(@user.id, @cinefile.id)
   end
 
+  def destroy
+    @film = Film.find(params[:id])
+    @film.destroy
+    flash[:notice] = 'Film deleted successfully'
+    redirect_to films_path
+  end
+
 private
 
   def film_params
     params.require(:film).permit(:title)
   end
-
 end
-
-# Parameters: {"utf8"=>"✓", "authenticity_token"=>"OCpf2bcXha65yNZIpNPU1iqBgb5W+QZdwunSuJoz3ZlXZv3LtkcSDQZQBYTP9OsRucmrgUJePYMsqH0JIhKdHw==", "film_record"=>"Batman: The Killing Joke,2016,382322", "commit"=>"Create Film"}

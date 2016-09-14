@@ -13,20 +13,19 @@ class UsersController < ApplicationController
     @films = Film.all
     @cinefile = @user.cinefile
     @list_films = @cinefile.list_films.all
-    @films_in_cinefile = []
-    @films_with_screenings = []
+    @films_with_upcoming_screenings = []
+    @other_films_in_cinefile = []
     @list_films.each do |list_film|
       @films.each do |film|
         if film.id == list_film.film_id
-          @films_in_cinefile << film
+          if film.upcoming_screening?
+            @films_with_upcoming_screenings << film
+          else
+            @other_films_in_cinefile << film
+          end
         end
-    end
-    @films_in_cinefile.each do |film|
-      if film.upcoming_screening? == true
-        @films_with_screenings << film
       end
     end
-  end
   end
 end
 # @cinemas.each do |cinema|
