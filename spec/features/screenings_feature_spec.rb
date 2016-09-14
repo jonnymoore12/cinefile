@@ -4,7 +4,7 @@ require "pry"
 feature 'screenings' do
   context "Creating screenings for cinemas" do
     let!(:odeon){ Cinema.create(name: 'Odeon Cheltenham') }
-    let!(:movie){ Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg') }
+    let!(:movie){ Film.create(title: 'Brazil', tmdb_id: '68') }
 
     scenario 'allows admin to create a screening for a cinema' do
 
@@ -22,8 +22,8 @@ feature 'screenings' do
 
   context "A user wants to know about upcoming screenings" do
     xscenario "User's are notified of an upcoming screening for a film on their Cinefile" do
-      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
-      Screening.create(film_id: film.id, screen_date: Time.now + 86400)
+      film = Film.create(title: 'Brazil', tmdb_id: '68')
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00")
       sign_up
       click_link_cinefile
       add_film
@@ -35,8 +35,8 @@ feature 'screenings' do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
       cinema1 = Cinema.create(name: 'The Waterfront')
       cinema2 = Cinema.create(name: 'Screen on the Water')
-      Screening.create(film_id: film.id, screen_date: Time.now + 86400, cinema_id: cinema1.id)
-      Screening.create(film_id: film.id, screen_date: Time.now + 86400, cinema_id: cinema2.id)
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00",cinema_id: cinema1.id)
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "21:00",cinema_id: cinema2.id)
       sign_up
       click_link_cinefile
       add_film
@@ -48,14 +48,29 @@ feature 'screenings' do
 
     xscenario "A user can access a link to the cinema's website" do
       film = Film.create(title: 'Hell or High Water', tmdb_id: '338766', poster_path: '/5GbRKOQSY08U3SQXXcQAKEnL2rE.jpg')
-      cinema = Cinema.create(name: 'Curzon Victoria', website: 'http://www.curzoncinemas.com/victoria/now-showing')
-      Screening.create(film_id: film.id, screen_date: Time.now + 86400, cinema_id: cinema.id)
+      cinema = Cinema.create(name: 'Curzon Victoria', phone: 03305001331, address: '58 Victoria Street, London, SW1E 6QW',
+                            website: 'http://www.curzoncinemas.com/victoria/now-showing')
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00", cinema_id: cinema.id)
       sign_up
       click_link_cinefile
       add_film(title: 'Hell or High Water')
       click_button "Screening Info"
-      expect(page).to have_content("Showing at Curzon Victoria")
+      expect(page).to have_content("Curzon Victoria")
       expect(page).to have_content("Website: Curzon Victoria Showtimes")
+    end
+
+    xscenario "The address and phone number of the cinema is displayed for each screening " do
+      film = Film.create(title: 'Hell or High Water', tmdb_id: '338766', poster_path: '/5GbRKOQSY08U3SQXXcQAKEnL2rE.jpg')
+      cinema = Cinema.create(name: 'Curzon Victoria', phone: 03305001331, address: '58 Victoria Street, London',
+                            postcode: 'SW1E 6QW', website: 'http://www.curzoncinemas.com/victoria/now-showing')
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00", cinema_id: cinema.id)
+      sign_up
+      click_link_cinefile
+      add_film(title: 'Hell or High Water')
+      click_button "Screening Info"
+      expect(page).to have_content(03305001331)
+      expect(page).to have_content "58 Victoria Street"
+      expect(page).to have_content "SW1E 6QW"
     end
   end
 
@@ -77,7 +92,7 @@ feature 'screenings' do
   context "A user wants to know about upcoming screenings" do
     xscenario "User's are notified of an upcoming screening for a film on their Cinefile" do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
-      screening = Screening.create(film_id: film.id, screen_date: Time.now + 86400)
+      screening = Screening.create(film_id: film.id, screen_time: "22:00", screen_date: Time.now + 86400)
       sign_up
       click_link_cinefile
       add_film
