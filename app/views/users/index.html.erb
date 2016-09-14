@@ -2,7 +2,7 @@ Welcome to <%= @user.username %>'s Cinefile screenings!
 <% @films_with_screenings.each do |film| %>
 <br>
 <br>
-  <h4 class="title"><%= film.title %></h4>
+  <h1 class="title"><%= film.title %></h1>
   <% @list_films.each do |list_film| %>
     <% if list_film.film_id == film.id %>
       <% @list_film = list_film %>
@@ -10,9 +10,9 @@ Welcome to <%= @user.username %>'s Cinefile screenings!
   <% end %>
   <% if film.upcoming_screening? %>
     <br>
-    <%= "#{film.title} has an upcoming screening" %>
     <% @films.each do |film| %>
       <% film.screenings.each do |screening| %>
+        <h3><%= screening.cinema_id.name %><h3>
         <h3><%= screening.screen_time.strftime('%H:%M') %></h3>
         <h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4>
         <% end %>
