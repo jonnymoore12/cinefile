@@ -4,6 +4,10 @@ class FilmsController < ApplicationController
     @film = Film.new
   end
 
+  def index
+    @films = Film.all
+  end
+
   def create
     @user = current_user
     @cinefile = @user.cinefile
@@ -26,6 +30,13 @@ class FilmsController < ApplicationController
       flash[:alert] = "#{@title} had previously been Cinefiled"
     end
     redirect_to user_cinefile_path(@user.id, @cinefile.id)
+  end
+
+  def destroy
+    @film = Film.find(params[:id])
+    @film.destroy
+    flash[:notice] = 'Film deleted successfully'
+    redirect_to films_path
   end
 
 private
