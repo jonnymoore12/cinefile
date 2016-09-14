@@ -22,7 +22,7 @@ private
     @screenings = screenings.all
     screenings_within_the_fortnight = []
     @screenings.each do |screening|
-      if  screening.screen_date < Time.now + 1209600 and screening.screen_date > Time.now
+      if screening.screen_date < Time.now + 1209600 && screening.screen_date > Time.now
         screenings_within_the_fortnight << screening
       end
     end

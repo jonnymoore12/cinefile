@@ -86,14 +86,32 @@ feature 'screenings' do
     end
   end
 
-  context "A user wants to know about upcoming screenings" do
-    scenario "User's are notified of an upcoming screening for a film on their Cinefile" do
+  context "Users can clearly see how long there is until upcoming screenings on Cinefile show page" do
+    scenario "We see the relevant message when the nearest screening is 3 days away" do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
-      screening = Screening.create(film_id: film.id, screen_time: "22:00", screen_date: Time.now + 86400)
+      Screening.create(film_id: film.id, screen_date: Time.now + 259200)
       sign_up
       click_link_cinefile
       add_film
-      expect(page).to have_content("Brazil has an upcoming screening")
+      expect(page).to have_content("Screening in 3 days!")
+    end
+
+    scenario "We see the relevant message when the nearest screening is tomorrow" do
+      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400)
+      sign_up
+      click_link_cinefile
+      add_film
+      expect(page).to have_content("Screening tomorrow!")
+    end
+
+    xscenario "We see the relevant message when the nearest screening is later today" do
+      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
+      Screening.create(film_id: film.id, screen_date: Time.now + 500)
+      sign_up
+      click_link_cinefile
+      add_film
+      expect(page).to have_content("Screening later today!")
     end
   end
 end
