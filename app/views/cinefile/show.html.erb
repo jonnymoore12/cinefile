@@ -45,7 +45,9 @@
             <% @list_film = list_film %>
           <% end %>
         <% end %>
-        <%= button_to "Remove", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete %>
+        <br /><br />
+        <%= link_to "", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete, :class => 'glyphicon glyphicon-trash' %>
+        <br />
         <%= link_to "Screenings", show_screenings_for_film_film_screenings_path(film) %>
       </center>
     </div>
@@ -62,7 +64,7 @@
       <% end %>
     </div>
   </div>
-  <br /><br /><br /><br />
+  <br /><br /><br />
 <% end %>
 
 
@@ -84,7 +86,8 @@
             <% @list_film = list_film %>
           <% end %>
         <% end %>
-        <%= button_to "Remove", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete %>
+        <br /><br />
+        <%= link_to "", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete, :class => 'glyphicon glyphicon-trash' %>
       </center>
     </div>
     <div class="col-md-3", style="text-align: left;">
