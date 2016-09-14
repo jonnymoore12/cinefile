@@ -6,12 +6,23 @@
   <% else %>
     Total films: <%= @films_in_cinefile.count %>
   <% end %>
-
-  <%= form_tag new_film_path, :method => 'get' do %>
-    <p>
-      <%= text_field_tag :search, params[:search], :placeholder => "Enter film title..." %>
-      <%= submit_tag "Search for film", :name => nil %>
-    </p>
+  <%= form_tag("/search", method: "get") do %>
+    <%= label_tag(:search, "Search for film") %>
+    <%= text_field_tag(:search) %>
+    <%= submit_tag("Search for film") %>
+  <% end %>
+  <br />
+  <% if !@searched_film.nil? %>
+    <%= form_for @film do |f| %>
+      <% @search = Tmdb::Search.new %>
+      <% @search.resource('movie') %>
+      <% @search.query(@searched_film) %>
+      <% @results = @search.fetch %>
+      <% @select_list = @results.collect {|movie| [ movie['title'] + " " + movie['release_date'][0..3],
+         movie['title'] + "," + movie['release_date'][0..3] + "," + movie['id'].to_s + "," + movie["backdrop_path"].to_s ] } %>
+      <%= select_tag "film_record", options_for_select(@select_list) %>
+      <%= f.submit "Add film" %>
+    <% end %>
   <% end %>
   <br /><br /><br />
 

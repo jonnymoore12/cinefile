@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     resources :screenings
   end
 
+  get "/search" => "search#new_search"
+
   root to: "static_pages#home"
 
   # Example of regular route:
