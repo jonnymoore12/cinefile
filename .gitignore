@@ -8,4 +8,4 @@
 !/tmp/.keep
 /.env
 /.byebug_history
-/.converalls.yml
+/.coveralls.yml
