@@ -8,6 +8,7 @@ class ListFilmsController < ApplicationController
     @cinefile = @user.cinefile
     if @cinefile
       @list_films = @cinefile.list_films.all
+      #@list_count = @list_films.count
       @films_with_upcoming_screenings = []
       @other_films_in_cinefile = []
       @list_films.each do |list_film|
@@ -25,6 +26,7 @@ class ListFilmsController < ApplicationController
       end
       @films_with_upcoming_screenings.sort_by! { |hsh| hsh[:days] }
       @films_with_upcoming_screenings.map! { |film| film[:film] }
+      @list_count = @films_with_upcoming_screenings.count
     end
   end
 
