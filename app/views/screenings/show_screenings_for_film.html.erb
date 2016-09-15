@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row-fluid">
   <div class="col-md-2"></div>
   <div class="col-md-4 image-screening" style="text-align: center;"><br />
       <h1 class="title-screening"><%= @film.title.upcase %> (<%= @film.release_year %>)</h1><br />
@@ -12,14 +12,14 @@
           <% if cinema_name_used == false %>
             <div class= "bottom-margin"><h2><%="#{cinema.name}"%></h2></div>
             <% cinema_name_used = true %>
-          <h4 class="website">Website: <%= link_to "#{cinema.name} Showtimes", cinema.website %><br></h4>
-          <%= "#{cinema.address.split(",")[0]}" %><br />
-          <%= "#{cinema.address.split(",")[1]}" %><br />
-          <%= "#{cinema.postcode}" %><br />
-          <%= "#{cinema.phone}" %><br />
+            <h4 class="website">Website: <%= link_to "#{cinema.name} Showtimes", cinema.website %><br></h4>
+            <%= "#{cinema.address.split(",")[0]}" %><br />
+            <%= "#{cinema.address.split(",")[1]}" %><br />
+            <%= "#{cinema.postcode}" %><br />
+            <%= "#{cinema.phone}" %><br />
           <% end %>
           <div class= "bottom-margin"><h3><%= screening.screen_time.strftime('%H:%M') %></h3></div>
-            <div class= "screen-dates"><h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4></div>
+          <div class= "screen-dates"><h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4></div>
         <% end %>
       <% end %>
       <br /><br />
