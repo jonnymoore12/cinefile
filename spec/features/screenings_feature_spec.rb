@@ -43,7 +43,7 @@ feature 'screenings' do
       expect(page).to have_content(03305001331)
       expect(page).to have_content "58 Victoria Street"
       expect(page).to have_content "SW1E 6QW"
-      expect(page).to have_content "Hell or High Water"
+      expect(page).to have_content "HELL OR HIGH WATER"
     end
 
     scenario "A user can access a link to the cinema's website" do

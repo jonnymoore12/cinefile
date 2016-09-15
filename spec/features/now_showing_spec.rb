@@ -6,6 +6,11 @@ feature 'NOW SHOWING page' do
   end
 
   context "No upcoming screenings" do
+    scenario 'Users are told if there Cinefile is empty' do
+      click_link 'NOW SHOWING'
+      expect(page).to have_content 'There are no films in your Cinefile. Please add films'
+    end
+
     scenario 'Users are told if there are no upcoming screenings for their Cinefile films' do
       click_link_cinefile
       add_film
@@ -24,7 +29,7 @@ feature 'NOW SHOWING page' do
       add_film
       click_link 'NOW SHOWING'
       expect(page).to have_content('22:00')
-      expect(page).to have_content('Brazil')
+      expect(page).to have_content('BRAZIL')
       expect(page).to have_content('Curzon Victoria')
     end
   end
