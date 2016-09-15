@@ -8,7 +8,6 @@ class ListFilmsController < ApplicationController
     @cinefile = @user.cinefile
     if @cinefile
       @list_films = @cinefile.list_films.all
-      #@list_count = @list_films.count
       @films_with_upcoming_screenings = []
       @other_films_in_cinefile = []
       @list_films.each do |list_film|
