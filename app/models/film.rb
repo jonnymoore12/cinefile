@@ -19,7 +19,6 @@ class Film < ActiveRecord::Base
 private
 
   def screenings_within_the_fortnight?
-    days_until_nearest_screening < 15
+    days_until_nearest_screening.between?(0, 14)
   end
-
 end
