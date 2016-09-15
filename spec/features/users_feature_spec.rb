@@ -33,10 +33,4 @@ feature "Users" do
       expect(page).to have_content("LOG IN")
     end
   end
-
-  context "Signing up with incorrect credentials" do
-    xscenario "A user cannot sign up without a username" do
-      sign_up(name: '')
-    end
-  end
 end
