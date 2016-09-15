@@ -14,13 +14,17 @@ class ListFilmsController < ApplicationController
         @films.each do |film|
           if film.id == list_film.film_id
             if film.upcoming_screening?
-              @films_with_upcoming_screenings << film
+              days = film.days_until_nearest_screening
+              film_hash = {film: film, days: days}
+              @films_with_upcoming_screenings << film_hash
             else
               @other_films_in_cinefile << film
             end
           end
         end
       end
+      @films_with_upcoming_screenings.sort_by! { |hsh| hsh[:days] }
+      @films_with_upcoming_screenings.map! { |film| film[:film] }
     end
   end
 
