@@ -13,6 +13,7 @@ class Film < ActiveRecord::Base
 
   def days_until_nearest_screening
     @array_of_days_until_screenings = screenings.all.map { |screening| screening.screen_date.day - Time.now.day }
+    @array_of_days_until_screenings.select! { |day| day >= 0 }
     @array_of_days_until_screenings.min
   end
 
