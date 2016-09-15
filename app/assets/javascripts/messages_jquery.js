@@ -1,3 +1,3 @@
 $( document ).ready(function() {
-  $ ( "#message" ).fadeTo(3000, 0);
+  $ ( "#message" ).fadeTo(5000, 0);
 });
