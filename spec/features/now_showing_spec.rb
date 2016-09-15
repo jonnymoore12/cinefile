@@ -6,16 +6,11 @@ feature 'NOW SHOWING page' do
   end
 
   context "No upcoming screenings" do
-    scenario 'Users are prompted to add films to their Cinefile first if they have not done so yet' do
-      click_link 'NOW SHOWING'
-      expect(page).to have_content 'Please add films first so we can keep you updated of any screenings :)'
-    end
-
     scenario 'Users are told if there are no upcoming screenings for their Cinefile films' do
       click_link_cinefile
       add_film
       click_link 'NOW SHOWING'
-      expect(page).to have_content 'There are no upcoming screenings for the films in your Cinefile'
+      expect(page).to have_content 'Sadly there are no upcoming screenings for the films in your Cinefile.'
     end
   end
 
