@@ -23,8 +23,6 @@ input:focus {
 }
 
 input#film {
-  border: 1px solid #bdbdbd;
-  border-radius: 5px;
   background-image: url("http://image.flaticon.com/icons/png/512/1/1854.png");
   background-size: 17px 17px;
   background-position: center left;
@@ -34,7 +32,6 @@ input#film {
   margin-left: 10px;
   margin-right: 10px;
 }
-
 
 .upcoming {
   height: 70px;
