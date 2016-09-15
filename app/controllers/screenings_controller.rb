@@ -1,5 +1,5 @@
 class ScreeningsController < ApplicationController
-  require "pry"
+
   def index
   end
 

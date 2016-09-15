@@ -30,6 +30,7 @@ class CinefileController < ApplicationController
         end
       end
     end
+    #byebug
     @film = Film.new
     if params[:film].nil?
       @searched_film = nil
@@ -46,4 +47,10 @@ class CinefileController < ApplicationController
       end
     redirect_to user_cinefile_list_films_path(@user.id, @user.cinefile.id)
   end
+
+  def sort_by_date(films_with_upcoming_screenings)
+
+
+  end
+
 end
