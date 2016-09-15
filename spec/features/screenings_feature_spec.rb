@@ -43,7 +43,7 @@ feature 'screenings' do
       expect(page).to have_content(03305001331)
       expect(page).to have_content "58 Victoria Street"
       expect(page).to have_content "SW1E 6QW"
-      expect(page).to have_content "Hell or High Water"
+      expect(page).to have_content "HELL OR HIGH WATER"
     end
 
     scenario "A user can access a link to the cinema's website" do
@@ -96,13 +96,14 @@ feature 'screenings' do
       expect(page).to have_css("//img[@src*='/assets/tomorrow-05cdaafd652e33683f752fdab9af5f3aa41cafbd11092f2cbcab5a69a47e8d56.png']")
     end
 
-    xscenario "We see the relevant message when the nearest screening is later today" do
+    scenario "We see the relevant message when the nearest screening is today" do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
       Screening.create(film_id: film.id, screen_date: Time.now + 500)
       sign_up
       click_link_cinefile
       add_film
-      expect(page).to have_content("Screening later today!")
+      # Image for 'SCREENING TODAY!':
+      expect(page).to have_css("//img[@src*='/assets/today-4192e5af125438055612e4332aac0cbd2440b4a14a2d5746f1af32b6a5360562.png']")
     end
   end
 end

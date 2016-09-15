@@ -1,5 +1,5 @@
 class ScreeningsController < ApplicationController
-  require "pry"
+
   def index
   end
 
@@ -35,11 +35,16 @@ class ScreeningsController < ApplicationController
   def show_screenings_for_film
     @film = Film.find(params[:film_id])
     @screenings = @film.screenings.all
+    @screenings_sorted_by_date = sort_screenings_by_date(@screenings)
     @cinemas = Cinema.all
     render '/screenings/show_screenings_for_film.html.erb'
   end
 
   private
+
+  def sort_screenings_by_date(screenings)
+    screenings.sort_by { |screening| screening.screen_date }
+  end 
 
   def screening_params
     params.require(:screening).permit(:film_id, :screen_date, :screen_time)

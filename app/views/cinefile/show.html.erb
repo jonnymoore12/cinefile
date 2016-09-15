@@ -32,9 +32,7 @@
   <div class="row">
     <div class="col-md-3", align="right">
       <br /><br /><br /><br /><br /><br /><br /><br />
-      <% if film.upcoming_screening? %>
         <%= image_tag("Upcoming_Screening.png", :class => 'upcoming') %>
-      <% end %>
     </div>
     <div class="col-md-6">
       <center>
@@ -47,14 +45,15 @@
           <% end %>
         <% end %>
         <br /><br />
-        <%= link_to "", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete, :class => 'glyphicon glyphicon-trash' %>
+        <div class="remove">
+          <%= link_to "", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete, :class => 'glyphicon glyphicon-trash' %>
+        </div>
         <br />
         <%= link_to "Screenings", show_screenings_for_film_film_screenings_path(film) %>
       </center>
     </div>
     <div class="col-md-3", style="text-align: left;">
       <br /><br /><br /><br /><br /><br /><br /><br />
-      <% if film.upcoming_screening? %>
         <% if film.days_until_nearest_screening == 0 %>
           <%= image_tag("today.png", :class => 'days_until_screening') %>
         <% elsif film.days_until_nearest_screening == 1 %>
@@ -62,7 +61,6 @@
         <% else %>
           <%= image_tag("#{film.days_until_nearest_screening}_days.png", :class => 'days_until_screening') %>
         <% end %>
-      <% end %>
     </div>
   </div>
   <br /><br /><br />
@@ -88,8 +86,12 @@
           <% end %>
         <% end %>
         <br /><br />
-        <%= link_to "", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete, :class => 'glyphicon glyphicon-trash' %>
+        <div class="remove">
+          <%= link_to "", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete, :class => 'glyphicon glyphicon-trash' %>
+        </div>
       </center>
+    </div>
+
     </div>
     <div class="col-md-3", style="text-align: left;">
       <br /><br /><br /><br /><br /><br /><br /><br />

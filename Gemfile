@@ -15,6 +15,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 gem 'pry'
 gem 'rename'
+gem 'coveralls', require: false
+gem 'simplecov', :require => false, :group => :test
 
 group :development, :test do
   gem 'byebug'
