@@ -10,7 +10,7 @@
   <%= form_tag("/search", method: "get", :class => "form") do %>
     <%= label_tag(:search, "Search for film:", :id => "label") %>
     <%= text_field_tag(:search, "", :id => "film") %>
-    <%= submit_tag("Search", :id => "submit") %>
+    <%= submit_tag("Search", :class => "submit") %>
   <% end %>
   <br />
   <% if !@searched_film.nil? %>
@@ -23,7 +23,7 @@
          movie['title'] + "," + movie['release_date'][0..3] + "," + movie['id'].to_s + "," + movie["backdrop_path"].to_s ] } %>
       <%= label_tag("Film to Add:") %>
       <%= select_tag "film_record", options_for_select(@select_list) %>
-      <%= f.submit "Add film" %>
+      <%= f.submit "Add film", :html => { :class => "submit"}  %>
     <% end %>
   <% end %>
   <br /><br />
