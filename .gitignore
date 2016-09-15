@@ -9,3 +9,4 @@
 /.env
 /.byebug_history
 /.coveralls.yml
+/coverage
