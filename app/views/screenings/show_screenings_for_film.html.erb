@@ -1,13 +1,16 @@
 <div class="row">
-  <div class="col-md-4"><br /><h3>Screenings for:</h3></div>
-  <div class="col-md-4">
-    <h1><%= @film.title %></h1>
+  <div class="col-md-2"></div>
+  <div class="col-md-4 image-screening" style="text-align: center;"><br />
+      <h1 class="title-screening"><%= @film.title.upcase %> (<%= @film.release_year %>)</h1><br />
+      <%= image_tag("http://cf2.imgobject.com/t/p/w500/" +@film.poster_path, :class => 'img-rounded img-screenings') %>
+  </div>
+  <div class="col-md-6">
     <% @cinemas.each do |cinema| %>
       <% cinema_name_used = false %>
-      <% @film.screenings.each do |screening| %>
+      <% @screenings_sorted_by_date.each do |screening| %>
         <% if cinema.id == screening.cinema_id %>
           <% if cinema_name_used == false %>
-            <h2><%="#{cinema.name}"%></h2>
+            <div class= "bottom-margin"><h2><%="#{cinema.name}"%></h2></div>
             <% cinema_name_used = true %>
           <%= "#{cinema.address.split(",")[0]}" %><br />
           <%= "#{cinema.address.split(",")[1]}" %><br />
@@ -15,12 +18,12 @@
           <%= "#{cinema.phone}" %><br />
           Website: <%= link_to "#{cinema.name} Showtimes", cinema.website %><br>
           <% end %>
-          <h3><%= screening.screen_time.strftime('%H:%M') %></h3>
-          <h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4>
+          <div class= "bottom-margin"><h3><%= screening.screen_time.strftime('%H:%M') %></h3></div>
+            <div class= "screen-dates"><h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4></div>
         <% end %>
-        <br /><br />
       <% end %>
+      <br /><br />
     <% end %>
+    <% console %>
   </div>
-  <div class="col-md-4"></div>
 </div>
