@@ -1,5 +1,5 @@
 <% if notice || alert %>
-  <div class="flash-message <%= notice ? "notice" : ""%><%= alert ? "error" : ""%>">
+  <div id="message" class="flash-message <%= notice ? "notice" : ""%><%= alert ? "error" : ""%>">
     <div class="container container_12 clearfix">
       <div class="grid_12">
         <% if notice %>

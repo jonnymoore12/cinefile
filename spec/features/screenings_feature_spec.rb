@@ -75,5 +75,35 @@ feature 'screenings' do
     end
   end
 
+  context "Users can clearly see how long there is until upcoming screenings on Cinefile show page" do
+    scenario "We see the relevant message when the nearest screening is 3 days away" do
+      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
+      Screening.create(film_id: film.id, screen_date: Time.now + 259200)
+      sign_up
+      click_link_cinefile
+      add_film
+      # Image for 'SCREENING IN 3 DAYS!':
+      expect(page).to have_css("//img[@src*='/assets/3_days-15c16ace40133135bb018054c09da3d2516b7cc0e81aa81b7f76c47b78cfa27a.png']")
+    end
+
+    scenario "We see the relevant message when the nearest screening is tomorrow" do
+      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
+      Screening.create(film_id: film.id, screen_date: Time.now + 86400)
+      sign_up
+      click_link_cinefile
+      add_film
+      # Image for 'SCREENING TOMORROW!':
+      expect(page).to have_css("//img[@src*='/assets/tomorrow-05cdaafd652e33683f752fdab9af5f3aa41cafbd11092f2cbcab5a69a47e8d56.png']")
+    end
+
+    xscenario "We see the relevant message when the nearest screening is later today" do
+      film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
+      Screening.create(film_id: film.id, screen_date: Time.now + 500)
+      sign_up
+      click_link_cinefile
+      add_film
+      expect(page).to have_content("Screening later today!")
+    end
+  end
 end
 end
