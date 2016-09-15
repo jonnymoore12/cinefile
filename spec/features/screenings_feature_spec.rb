@@ -7,16 +7,9 @@ feature 'screenings' do
     let!(:movie){ Film.create(title: 'Brazil', tmdb_id: '68') }
 
     scenario 'allows admin to create a screening for a cinema' do
-
-       visit '/cinemas'
-       click_link 'Odeon Cheltenham'
-       click_link 'Add screening to Odeon Cheltenham'
-       fill_in 'Date', with: "09/09/16"
-       fill_in 'Time', with: "10:00"
-       select 'Brazil', from: 'film_id'
-       click_button 'Add Screening'
-       expect(current_path).to eq "/cinemas/#{odeon.id}"
-       expect(page).to have_content("#{movie.id}")
+      add_screening
+      expect(current_path).to eq "/cinemas/#{odeon.id}"
+      expect(page).to have_content("#{movie.id}")
     end
   end
 
@@ -29,6 +22,7 @@ feature 'screenings' do
       add_film
       expect(page).to have_link("Screenings")
     end
+  end
 
   context "Viewing info on a film's screenings" do
     scenario "Cinema info is available for each film's screening as well as film info " do
@@ -106,5 +100,4 @@ feature 'screenings' do
       expect(page).to have_css("//img[@src*='/assets/today-4192e5af125438055612e4332aac0cbd2440b4a14a2d5746f1af32b6a5360562.png']")
     end
   end
-end
 end

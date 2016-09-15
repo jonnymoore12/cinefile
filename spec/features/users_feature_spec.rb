@@ -8,15 +8,31 @@ feature "Users" do
       expect(page).to have_content("Welcome! You have signed up successfully.")
       expect(page).to_not have_content("SIGN UP")
     end
-    it "A user can log in" do
+    it "A user can log in with username" do
       sign_up
       click_link "LOG OUT"
-      click_link "LOG IN"
-      fill_in "Login", with: "test"
-      fill_in "Password", with: "password"
-      click_button "Log in"
+      sign_in_with_username
       expect(page).to_not have_content("SIGN UP")
       expect(page).to_not have_content("LOG IN")
+    end
+    it "A user can login with email" do
+      sign_up
+      click_link "LOG OUT"
+      sign_in_with_email
+      expect(page).to_not have_content("SIGN UP")
+      expect(page).to_not have_content("LOG IN")
+    end
+    it "A user can't sign up with the same username" do
+      sign_up
+      click_link "LOG OUT"
+      sign_up
+      expect(page).to have_content("Username has already been taken")
+    end
+    it "A user can't sign up with the same email" do
+      sign_up
+      click_link "LOG OUT"
+      sign_up
+      expect(page).to have_content("Email has already been taken")
     end
   end
 
