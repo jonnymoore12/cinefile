@@ -17,7 +17,7 @@ end
 
 def sign_in_with_email
   click_link "LOG IN"
-  fill_in "Login", with: "test"
+  fill_in "Login", with: "example@email.com"
   fill_in "Password", with: "password"
   click_button "Log in"
 end
