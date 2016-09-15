@@ -1,5 +1,5 @@
 <div class="row" style="text-align: center;">
-  <h1><%= "Upcoming Screenings".upcase %></h1>
+  <h1><%= "Upcoming Screenings" %></h1>
   <% if @cinefile.list_films.empty? %>
     There are no films in your Cinefile.<br />
     Please add films so we can keep you updated with any screening info :)
@@ -16,26 +16,25 @@
     </div>
     <div class="col-md-6">
       <% @cinemas.each do |cinema| %>
-      <% cinema_name_used = false %>
+        <% cinema_name_used = false %>
         <% screenings_sorted_by_date = film.screenings.sort_by { |screening| screening.screen_date } %>
-        <% screenings_sorted_by_date.each do |screening| %>
-          <% if cinema.id == screening.cinema_id %>
-            <% if cinema_name_used == false %>
-              <div class= "bottom-margin"><h2><%="#{cinema.name}"%></h2></div>
-              <% cinema_name_used = true %>
-              <h4 class="website">Website: <%= link_to "#{cinema.name} Showtimes", cinema.website %><br></h4>
-              <%= "#{cinema.address.split(",")[0]}" %><br />
-              <%= "#{cinema.address.split(",")[1]}" %><br />
-              <%= "#{cinema.postcode}" %><br />
-              <%= "#{cinema.phone}" %><br />
+          <% screenings_sorted_by_date.each do |screening| %>
+            <% if cinema.id == screening.cinema_id %>
+              <% if cinema_name_used == false %>
+                <div class= "bottom-margin"><h2><%="#{cinema.name}"%></h2></div>
+                <% cinema_name_used = true %>
+                <h4 class="website">Website: <%= link_to "#{cinema.name} Showtimes", cinema.website %><br/></h4>
+                <%= "#{cinema.address.split(",")[0]}" %><br />
+                <%= "#{cinema.address.split(",")[1]}" %><br />
+                <%= "#{cinema.postcode}" %><br />
+                <%= "#{cinema.phone}" %><br />
+              <% end %>
+              <div class= "bottom-margin"><h3><%= screening.screen_time.strftime('%H:%M') %></h3></div>
+              <div class= "screen-dates"><h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4></div>
             <% end %>
-            <div class= "bottom-margin"><h3><%= screening.screen_time.strftime('%H:%M') %></h3></div>
-            <div class= "screen-dates"><h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4></div>
           <% end %>
-        <% end %>
-        <br /><br />
       <% end %>
-      <br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br />
     </div>
   <% end %>
 </div>
