@@ -20,7 +20,7 @@ feature 'screenings' do
       sign_up
       click_link_cinefile
       add_film
-      expect(page).to have_link("Screenings")
+      expect(page).to have_link("Show me where!")
     end
   end
 
@@ -33,7 +33,7 @@ feature 'screenings' do
       sign_up
       click_link_cinefile
       add_film(title: 'Hell or High Water')
-      click_link "Screenings"
+      click_link "Show me where!"
       expect(page).to have_content(03305001331)
       expect(page).to have_content "58 Victoria Street"
       expect(page).to have_content "SW1E 6QW"
@@ -48,7 +48,7 @@ feature 'screenings' do
       sign_up
       click_link_cinefile
       add_film(title: 'Hell or High Water')
-      click_link "Screenings"
+      click_link "Show me where!"
       expect(page).to have_content("Curzon Victoria")
       expect(page).to have_content("Website: Curzon Victoria Showtimes")
     end
@@ -65,7 +65,6 @@ feature 'screenings' do
     scenario 'allows admin to create a screening for a cinema' do
        expect(current_path).to eq "/cinemas/#{odeon.id}"
        expect(page).to have_content("#{movie.id}")
-       #expect(page).to have_content("16-09-09")
     end
   end
 
