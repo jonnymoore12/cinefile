@@ -56,7 +56,9 @@ feature "Managing cinefiles" do
     scenario "Users can delete films from their cinefile" do
       add_film
       expect(page).to have_content "Brazil"
-      click_button 'Remove'
+      within(".remove") do
+        click_link ''
+      end
       expect(page).to have_content "'Brazil' was successfully removed from your Cinefile"
     end
   end
