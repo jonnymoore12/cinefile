@@ -20,6 +20,12 @@ feature "Managing cinefiles" do
       expect(page).to have_content "Brazil had previously been Cinefiled"
     end
 
+    scenario "A user cannot search for 'nothing'" do
+      fill_in :search, with: ""
+      click_button 'Search'
+      expect(page).to have_content("Please enter a film in the search box")
+    end
+
     scenario "Films with commas can be added to cinefiles without causing errors" do
       add_film(title: 'The Good, the Bad and the Ugly')
       expect(page).to have_content "The Good, the Bad and the Ugly"
