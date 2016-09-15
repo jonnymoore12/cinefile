@@ -1,11 +1,12 @@
 <center>
-  <h3><%= "#{@user.username}'s Cinefile" %></h3>
+  <h1><%= "#{@user.username}'s Cinefile" %></h1>
   <br />
   <% if @list_count == 0 %>
     Your Cinefile is empty :(<br />
     Add films and the Cinefile team will keep you informed of upcoming screenings.
   <% else %>
-    Total films: <%= @list_count %>
+    Total films: <div class="totals"><%= @list_count %></div><br />
+    Films with Upcoming Screenings: <div class="totals"><%= @films_with_upcoming_screenings.count %></div><br />
   <% end %>
   <%= form_tag("/search", method: "get", :class => "form") do %>
     <%= label_tag(:search, "Search for film:", :id => "label") %>
