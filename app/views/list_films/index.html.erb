@@ -3,10 +3,17 @@
   <div class="col-md-4">
     <h1>Upcoming Screenings</h1>
     <% if @cinefile %>
+<<<<<<< HEAD
       <% if @list_count == 0 %>
         Sadly there are no upcoming screenings for the films in your Cinefile.
       <% else %>
         <%= @user.username %>, check out the following screening information for your Cinefile films.
+=======
+      <% if @films_with_upcoming_screenings.count > 0 %>
+        <%= @user.username %>, check out the following screening information for your Cinefile films.
+      <% else %>
+        There are no upcoming screenings for the films in your Cinefile.
+>>>>>>> dbd03424257106d5f536bd88efa59846a50d7a30
       <% end %><br />
 
       <% @films_with_upcoming_screenings.each do |film| %>

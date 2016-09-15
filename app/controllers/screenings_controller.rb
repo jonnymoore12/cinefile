@@ -1,5 +1,9 @@
 class ScreeningsController < ApplicationController
+<<<<<<< HEAD
 
+=======
+  require "pry"
+>>>>>>> dbd03424257106d5f536bd88efa59846a50d7a30
   def index
   end
 

@@ -23,18 +23,25 @@ class CinefileController < ApplicationController
       @films.each do |film|
         if film.id == list_film.film_id
           if film.upcoming_screening?
+<<<<<<< HEAD
             days = film.days_until_nearest_screening
             film_hash = {film: film, days: days}
             @films_with_upcoming_screenings << film_hash
+=======
+            @films_with_upcoming_screenings << film
+>>>>>>> dbd03424257106d5f536bd88efa59846a50d7a30
           else
             @other_films_in_cinefile << film
           end
         end
       end
     end
+<<<<<<< HEAD
     @films_with_upcoming_screenings.sort_by! { |hsh| hsh[:days] }
     @films_with_upcoming_screenings.map! { |film| film[:film] }
 
+=======
+>>>>>>> dbd03424257106d5f536bd88efa59846a50d7a30
     @film = Film.new
     if params[:film].nil?
       @searched_film = nil
