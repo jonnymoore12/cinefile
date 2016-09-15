@@ -1,0 +1,13 @@
+<%= form_for @cinema do |f| %>
+  <%= f.label :name, "Name" %>
+  <%= f.text_field :name %>
+  <%= f.label :address, "Address" %>
+  <%= f.text_field :address %>
+  <%= f.label :postcode, "Postcode" %>
+  <%= f.text_field :postcode %>
+  <%= f.label :phone, "Phone" %>
+  <%= f.number_field :phone %>
+  <%= f.label :website, "Website" %>
+  <%= f.url_field :website %>
+  <%= f.submit "Add Cinema" %>
+<% end %>

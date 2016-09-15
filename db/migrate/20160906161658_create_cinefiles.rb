@@ -1,0 +1,8 @@
+class CreateCinefiles < ActiveRecord::Migration
+  def change
+    create_table :cinefiles do |t|
+
+      t.timestamps null: false
+    end
+  end
+end

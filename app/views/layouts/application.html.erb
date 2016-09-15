@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cinefile</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
+</head>
+<body>
+  <br /><br /><p></p>
+
+  <%= render "layouts/messages" %>
+  <%= render "layouts/header" %>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<%= @cinema.name %><br>
+<%= @cinema.address %>, <%= @cinema.postcode %><br>
+Phone: <%= @cinema.phone %><br>
+Website: <%= @cinema.website %><br>
+<%= link_to "Edit", edit_cinema_path(@cinema) %><br>
+<%= link_to "Delete", cinema_path(@cinema), method: :delete %>
+<br>
+<br>
+Screenings: <% @cinema.screenings.all.each do |screening| %><br>
+Film_id: <%= screening.film_id %><br>
+Screen_date: <%= screening.screen_date %><br>
+Screen_time: <%= screening.screen_time %><br>
+<%= link_to "Delete screening #{screening.id}", cinema_screening_path(@cinema, screening), method: :delete %>
+<% end %>
+<br>
+<br>
+<%= link_to "Add screening to #{@cinema.name}", new_cinema_screening_path(@cinema) %>
+ <br>

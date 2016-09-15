@@ -1,0 +1,11 @@
+<%= form_for [@cinema, @screening] do |f| %>
+  <%= f.label :film, "Film" %>
+  <% @select_list = @films.collect{ |movie| [movie.title, movie.id] } %>
+  <%= select_tag "film_id", options_for_select(@select_list) %>
+
+  <%= f.label :screen_date, "Date" %>
+  <%= f.date_field :screen_date %>
+  <%= f.label :screen_time, "Time" %>
+  <%= f.time_field :screen_time %>
+  <%= f.submit 'Add Screening' %>
+<% end %>
