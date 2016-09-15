@@ -39,4 +39,5 @@ class ListFilmsController < ApplicationController
     flash[:notice] = "'#{@film.title}' was successfully removed from your Cinefile"
     redirect_to user_cinefile_path(@user, @cinefile)
   end
+
 end
