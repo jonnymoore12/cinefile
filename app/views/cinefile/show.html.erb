@@ -51,7 +51,7 @@
             <%= link_to "", user_cinefile_list_film_path(@user, @cinefile, @list_film ), method: :delete, :class => 'glyphicon glyphicon-trash' %>
           </div>
           <br />
-          <%= link_to "Screenings", show_screenings_for_film_film_screenings_path(film) %>
+
         </center>
       </div>
       <div class="col-md-3", style="text-align: left;">
@@ -63,6 +63,8 @@
           <% else %>
             <%= image_tag("#{film.days_until_nearest_screening}_days.png", :class => 'days_until_screening') %>
           <% end %>
+          <br>
+          <%= link_to "Show me where!", show_screenings_for_film_film_screenings_path(film), class: "btn btn-default" %>
       </div>
     </div>
     <br /><br /><br />
