@@ -1,3 +1,12 @@
+<div class="row" style="text-align: center;">
+  <h1><%= "Upcoming Screenings".upcase %></h1>
+  <% if @cinefile.list_films.empty? %>
+    There are no films in your Cinefile.<br />
+    Please add films so we can keep you updated with any screening info :)
+  <% elsif @films_with_upcoming_screenings.empty? %>
+    Sadly there are no upcoming screenings for the films in your Cinefile.
+  <% end %>
+</div>
 <div class="row">
   <% @films_with_upcoming_screenings.each do |film| %>
     <div class="col-md-2"></div>
