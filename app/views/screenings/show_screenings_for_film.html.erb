@@ -7,7 +7,7 @@
   <div class="col-md-6">
     <% @cinemas.each do |cinema| %>
       <% cinema_name_used = false %>
-      <% @film.screenings.each do |screening| %>
+      <% @screenings_sorted_by_date.each do |screening| %>
         <% if cinema.id == screening.cinema_id %>
           <% if cinema_name_used == false %>
             <div class= "bottom-margin"><h2><%="#{cinema.name}"%></h2></div>
@@ -19,7 +19,7 @@
           Website: <%= link_to "#{cinema.name} Showtimes", cinema.website %><br>
           <% end %>
           <div class= "bottom-margin"><h3><%= screening.screen_time.strftime('%H:%M') %></h3></div>
-          <h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4>
+            <div class= "screen-dates"><h4><%= screening.screen_date.strftime('%A %e %B %Y') %></h4></div>
         <% end %>
       <% end %>
       <br /><br />
