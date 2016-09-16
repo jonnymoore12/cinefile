@@ -5,7 +5,7 @@
     Your Cinefile is empty :(<br />
     Add films and the Cinefile team will keep you informed of upcoming screenings.
   <% else %>
-    Cinefiled: <span class="totals"><%= @list_count %></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Screenings: <span class="totals"><%= @films_with_upcoming_screenings.count %></span><br /><br />
+    Cinefiled: <span class="totals"><%= @list_count %></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upcoming: <span class="totals"><%= @films_with_upcoming_screenings.count %></span><br /><br />
   <% end %>
   <%= form_tag("/search", method: "get", :class => "form") do %>
     <%= label_tag(:search, "", :id => "label") %>

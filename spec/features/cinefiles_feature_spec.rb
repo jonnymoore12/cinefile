@@ -59,7 +59,7 @@ feature "Managing cinefiles" do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
       Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00")
       add_film(title: 'Brazil')
-      expect(page).to have_content "Screenings: 1"
+      expect(page).to have_content "Upcoming: 1"
     end
 
     scenario "Users are informed if their Cinefile is empty" do
