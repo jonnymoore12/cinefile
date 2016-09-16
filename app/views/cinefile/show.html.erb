@@ -1,15 +1,14 @@
 <center>
   <h1><%= "#{@user.username}'s Cinefile" %></h1>
-  <br />
+  <!-- <br /> -->
   <% if @list_count == 0 %>
     Your Cinefile is empty :(<br />
     Add films and the Cinefile team will keep you informed of upcoming screenings.
   <% else %>
-    Total films: <div class="totals"><%= @list_count %></div><br />
-    Films with Upcoming Screenings: <div class="totals"><%= @films_with_upcoming_screenings.count %></div><br />
+    Cinefiled: <span class="totals"><%= @list_count %></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Screenings: <span class="totals"><%= @films_with_upcoming_screenings.count %></span><br /><br />
   <% end %>
   <%= form_tag("/search", method: "get", :class => "form") do %>
-    <%= label_tag(:search, "Search for film:", :id => "label") %>
+    <%= label_tag(:search, "", :id => "label") %>
     <%= text_field_tag(:search, "", :id => "film") %>
     <%= submit_tag("Search", :class => "submit") %>
   <% end %>
@@ -22,9 +21,9 @@
       <% @results = @search.fetch %>
       <% @select_list = @results.collect {|movie| [ movie['title'] + " " + movie['release_date'][0..3],
          movie['title'] + "," + movie['release_date'][0..3] + "," + movie['id'].to_s + "," + movie["backdrop_path"].to_s ] } %>
-      <%= label_tag("Film to Add:") %>
-      <%= select_tag "film_record", options_for_select(@select_list), { :class => "submit" } %>
-      <%= f.submit "Add film", :html => { :class => "submit"}  %>
+      <%= label_tag("") %>
+      <%= select_tag "film_record", options_for_select(@select_list), { :class => "submitag" } %>
+      <%= f.submit "Add", :html => { :class => "submit"}  %>
     <% end %>
   <% end %>
   <br /><br />

@@ -17,7 +17,7 @@ feature "Managing cinefiles" do
     scenario "A user cannot add a film which already exists in their Cinefile" do
       add_film
       add_film
-      expect(page).to have_content "Brazil had previously been Cinefiled"
+      expect(page).to have_content "Brazil has previously been Cinefiled"
     end
 
     scenario "A user cannot search for 'nothing'" do
@@ -52,14 +52,14 @@ feature "Managing cinefiles" do
     scenario "The cinefile displays the total number of films in the Cinefile" do
       add_film(title: 'Fight Club')
       add_film(title: 'Blade Runner')
-      expect(page).to have_content "Total films: 2"
+      expect(page).to have_content "Cinefiled: 2"
     end
 
     scenario "The cinefile displays the total number of films with upcoming screenings in Cinefile" do
       film = Film.create(title: 'Brazil', tmdb_id: '68', poster_path: '/pVlZBKp8v3Jzd0ahPmrBGlbeQ2s.jpg')
       Screening.create(film_id: film.id, screen_date: Time.now + 86400, screen_time: "22:00")
       add_film(title: 'Brazil')
-      expect(page).to have_content "Films with Upcoming Screenings: 1"
+      expect(page).to have_content "Screenings: 1"
     end
 
     scenario "Users are informed if their Cinefile is empty" do

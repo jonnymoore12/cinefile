@@ -25,6 +25,7 @@ input:focus {
 input#film {
   border: 1px solid #bdbdbd;
   border-radius: 5px;
+  -moz-border-radius: 5px;
   background-image: url("http://image.flaticon.com/icons/png/512/1/1854.png");
   background-size: 17px 17px;
   background-position: center left;
@@ -33,12 +34,21 @@ input#film {
   background-color: #f2f2f2;
   margin-left: 10px;
   margin-right: 10px;
+  width: 400px;
 }
 
 .submit {
   border: 1px solid #bdbdbd;
   border-radius: 5px;
+  -moz-border-radius: 5px;
   background-color: #f2f2f2;
+}
+
+.submitag {
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  width: 500px;
 }
 
 .upcoming {
