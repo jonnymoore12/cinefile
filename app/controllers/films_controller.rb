@@ -27,7 +27,7 @@ class FilmsController < ApplicationController
       ListFilm.create(film_id: film_id, cinefile_id: cinefile_id)
       flash[:notice] = "#{@title} has successfully been Cinefiled!"
     else
-      flash[:alert] = "#{@title} had previously been Cinefiled"
+      flash[:alert] = "#{@title} has previously been Cinefiled"
     end
     redirect_to user_cinefile_path(@user.id, @cinefile.id)
   end

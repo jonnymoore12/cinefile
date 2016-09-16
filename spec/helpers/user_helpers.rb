@@ -25,7 +25,7 @@ end
 def add_film(title: 'Brazil')
   fill_in :search, with: title
   click_button 'Search'
-  click_button "Add film"
+  click_button "Add"
 end
 
 def click_link_cinefile
