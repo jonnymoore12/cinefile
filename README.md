@@ -15,7 +15,7 @@ Cinefile users adds films that they would love to watch on the big screen to the
 
 <img width="1280" alt="cinefile 1" src="https://cloud.githubusercontent.com/assets/18581870/18608965/90a56ce6-7cee-11e6-88ee-5380f1c5c013.png">
 
-<img width="1280" alt="cinefile 3" src="https://cloud.githubusercontent.com/assets/18581870/18608969/ba217c40-7cee-11e6-9d29-90dd197b490b.png">
+<img width="1280" alt="cinefile 3" src="https://cloud.githubusercontent.com/assets/18581870/18609081/e91e1ed4-7cf0-11e6-8158-eafe4e64c80f.png">
 
 <img width="1280" alt="cinefile 2" src="https://cloud.githubusercontent.com/assets/18581870/18608967/a9125d7a-7cee-11e6-8d98-bb61f89b0bd8.png">
 
