@@ -11,6 +11,9 @@ Web application made as a team final project during Makers Academy 2016.
 ### Concept
 Cinefile users adds films that they would love to watch on the big screen to their Cinefile. Using real cinema screening information, Cinefile notifies users if any of their Cinefiled films have local upcoming screenings, so they don't miss out. The app was, in particular, designed to keep up with the theatrical releases of less mainstream films and limited re-releases of classics so users don't have to seek out the information themselves.
 
+### Demo Video
+[YouTube](https://www.youtube.com/watch?v=YOBl2oVqOA0&feature=youtu.be)
+
 ### Screenshots
 
 <img width="1280" alt="cinefile 1" src="https://cloud.githubusercontent.com/assets/18581870/18608965/90a56ce6-7cee-11e6-88ee-5380f1c5c013.png">
